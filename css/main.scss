@@ -14,14 +14,21 @@ $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
+$padding-sm:       0.5rem;
+$padding-md:       1.0rem;
+$padding-lg:       1.5rem;
+$padding-xl:       2.0rem;
 
-$text-color:       #E2E8F0;
-$background-color: #1A202C;
-$brand-color:      #4FD1C5;
+$black-color:    #1A202C;
+$white-color:    #E2E8F0;
+$brand-color:    #4FD1C5;
 
-$grey-color:       #A0AEC0;
+$grey-color:     #A0AEC0;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$text-color:       $black-color;
+$background-color: $white-color;
 
 // Width of the content area
 $content-width:    800px;
@@ -51,5 +58,6 @@ $on-laptop:        800px;
         "base",
         "layout",
         "syntax-highlighting",
-        "hero"
+        "hero",
+        "nav"
 ;
