@@ -1,0 +1,64 @@
+.projects {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - (#{$spacing-sm} * 2));
+    margin: 0 $spacing-md $spacing-md 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background-color: $white-color-light;
+
+    .project__content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: $spacing-md;
+    }
+
+    .project__tags {
+      span {
+        border: 1px solid $black-color;
+        padding: $spacing-xs $spacing-sm;
+        font-size: $small-font-size;
+        text-transform: uppercase;
+      }
+    }
+
+    .project__summary {
+      flex: 1;
+    }
+
+    .project__links {
+
+      margin-top: auto;
+      border-top: $spacing-xs solid $black-color;
+      padding-top: $spacing-md;
+
+      a:first-child {
+        padding: $spacing-xs $spacing-sm;
+        background-color: $brand-color;
+        color: $black-color;
+      }
+
+      a:nth-child(2) {
+        padding: calc(#{$spacing-xs} - 1px) calc(#{$spacing-sm} - 1px);
+        border: 1px solid $brand-color;
+      }
+    }
+  }
+
+  @media screen and (min-width: $container-width-lg) {
+    .project {
+      width: calc(50% - (#{$spacing-sm} * 2));
+    }
+  }
+
+  @media screen and (min-width: $container-width-xl) {
+    .project {
+      width: calc(33% - (#{$spacing-sm} * 2));
+    }
+  }
+}

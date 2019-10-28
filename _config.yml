@@ -18,3 +18,12 @@ github_username: ptrandev
 
 # Build settings
 markdown: kramdown
+
+# Collections
+collections:
+  projects:
+    output: true
+
+# Pagination
+paginate: 12
+paginate_path: "blog/page/:num/"

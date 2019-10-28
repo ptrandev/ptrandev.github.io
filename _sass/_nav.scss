@@ -1,15 +1,16 @@
 .nav {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  width: 30vw;
-  max-width: 400px;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 300px;
   height: 100vh;
   background-size: cover;
   background-image: linear-gradient(rgba($black-color, 0.75), rgba($black-color, 0.75)), url("/img/home.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  padding: $padding-lg;
+  padding: $spacing-lg;
   color: $white-color;
 
   h1 {
@@ -18,12 +19,19 @@
 }
 
 .nav__title {
-  padding-bottom: $padding-md;
+  padding-bottom: $spacing-md;
+
+  span {
+    font-size: $h5-font-size;
+  }
 }
 
 .nav__menu {
   ul {
     list-style-type: none;
     padding: 0;
+  }
+  li {
+    font-size: $h3-font-size;
   }
 }

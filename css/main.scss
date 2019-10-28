@@ -3,39 +3,54 @@
 ---
 @charset "utf-8";
 
+// fonts
+$base-font-family:   "Work Sans", Helvetica, Arial, sans-serif;
+$base-font-size:     1.2rem;
+$base-font-weight:   400;
+$bold-font-weight:   700;
+$small-font-size:    $base-font-size * 0.75;
+$base-line-height:   1.4;
+
+// headings
+$h1-font-size:       $base-font-size * 2.25;
+$h2-font-size:       $base-font-size * 2;
+$h3-font-size:       $base-font-size * 1.75;
+$h4-font-size:       $base-font-size * 1.5;
+$h5-font-size:       $base-font-size * 1.25;
+$h6-font-size:       $base-font-size;
 
 
-// Our variables
-$base-font-family: "Work Sans", Helvetica, Arial, sans-serif;
-$base-font-size:   20px;
-$base-font-weight: 400;
-$bold-font-weight: 700;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// spacing
+$spacing-unit:       30px;
+$spacing-xs:         0.25rem;
+$spacing-sm:         0.5rem;
+$spacing-md:         1.0rem;
+$spacing-lg:         1.5rem;
+$spacing-xl:         2.0rem;
 
-$spacing-unit:     30px;
-$padding-sm:       0.5rem;
-$padding-md:       1.0rem;
-$padding-lg:       1.5rem;
-$padding-xl:       2.0rem;
+// colors
+$black-color:      #1A202C;
 
-$black-color:    #1A202C;
-$white-color:    #E2E8F0;
-$brand-color:    #4FD1C5;
+$white-color:      #E2E8F0;
+$white-color-light:  #F7FAFC; 
 
-$grey-color:     #A0AEC0;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$brand-color:      #4FD1C5;
 
-$text-color:       $black-color;
-$background-color: $white-color;
+$grey-color:       #A0AEC0;
+$grey-color-light:   lighten($grey-color, 40%);
+$grey-color-dark:    darken($grey-color, 25%);
 
-// Width of the content area
-$content-width:    800px;
+$text-color:         $black-color;
+$background-color:   $white-color;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+// container width
+$container-width-xl: 1280px;
+$container-width-lg: 1024px;
+$container-width-md: 768px;
+$container-width-sm: 568px;
 
+$on-palm: 600px;
+$on-laptop: 800px;
 
 
 // Use media queries like this:
@@ -58,6 +73,7 @@ $on-laptop:        800px;
         "base",
         "layout",
         "syntax-highlighting",
-        "hero",
-        "nav"
+        "nav",
+        "projects",
+        "blog"
 ;

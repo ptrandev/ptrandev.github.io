@@ -92,6 +92,29 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $bold-font-weight;
 }
 
+h1 {
+    font-size: $h1-font-size;
+}
+
+h2 {
+    font-size: $h2-font-size;
+}
+
+h3 {
+    font-size: $h3-font-size;
+}
+
+h4 {
+    font-size: $h4-font-size;
+}
+
+h5 {
+    font-size: $h5-font-size;
+}
+
+h6 {
+    font-size: $h6-font-size;
+}
 
 
 /**
@@ -164,12 +187,22 @@ pre {
  */
 .wrapper {
     width: 100%;
-    max-width: 1024px;
-    padding: $padding-xl;
-    margin: 0 auto;
+    margin-left: 300px;
 }
 
+/**
+ * Container
+ */
+.container {
+    width: 100%;
+    max-width: $container-width-xl;
+    margin: 0 auto;
+    padding: $spacing-xl;
+}
 
+.container--md {
+    max-width: $container-width-md;
+}
 
 /**
  * Clearfix

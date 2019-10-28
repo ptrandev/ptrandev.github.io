@@ -7,5 +7,46 @@ layout: default
   <p>A showcase of a few of my favorite projects.</p>
 </div>
 
+{% assign projects = site.projects | sort: 'meta.date' %}
+
 <div class="content">
+  <div class="projects">
+  {% for project in projects %}
+    {% if project.meta.featured == true %}
+    <div class="project">
+
+      <div class="project__image">
+        <img src="{{ project.meta.hero }}" alt="{{project.title}} hero image">
+      </div>
+
+      <div class="project__content">
+
+        <div class="project__tags">
+          {% for tags in project.tags %}
+          <span>{{tags}}</span>
+          {% endfor %}
+        </div>
+
+        <div class="project__title">
+          <h3>{{ project.title }}</h3>
+        </div>
+
+        <div class="project__summary">
+          {{ project.excerpt }}
+        </div>
+
+        <div class="project__links">
+          {% for meta in project.meta offset:3 %}
+          <a class="button" target="_blank" rel="noopener" href="{{meta[1]}}">View {{meta[0] | capitalize}}</a>
+          {% endfor %}
+        </div>
+
+      </div>
+
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <p>Want to view more of my projects? Head over to my Github Page.</p>
 </div>
