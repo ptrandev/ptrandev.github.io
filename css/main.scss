@@ -8,7 +8,7 @@ $base-font-family:   "Work Sans", Helvetica, Arial, sans-serif;
 $base-font-size:     1.2rem;
 $base-font-weight:   400;
 $bold-font-weight:   700;
-$small-font-size:    $base-font-size * 0.75;
+$small-font-size:    $base-font-size * 0.875;
 $base-line-height:   1.4;
 
 // headings
@@ -28,11 +28,14 @@ $spacing-md:         1.0rem;
 $spacing-lg:         1.5rem;
 $spacing-xl:         2.0rem;
 
+// shadows
+$shadow-1: 0 0 5px rgba(0,0,0,0.1);
+
 // colors
 $black-color:      #1A202C;
 
 $white-color:      #E2E8F0;
-$white-color-light:  #F7FAFC; 
+$white-color-light:#F7FAFC; 
 
 $brand-color:      #4FD1C5;
 
@@ -75,5 +78,6 @@ $on-laptop: 800px;
         "syntax-highlighting",
         "nav",
         "projects",
-        "blog"
+        "blog",
+        "post"
 ;

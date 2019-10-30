@@ -74,14 +74,8 @@ quickly refactored all of my jQuery-dependent code. I was using Flexbox and CSS
 Grid anyhow so support for older browsers wasn't a big concern. jQuery was just
 extra bloat that I didn't need to ship.
 
-<figure>
-  <a href="/assets/images/posts/2018-06-01-mendeleev-720.png" class="progressive
-  replace">
-    <img src="/assets/images/posts/2018-06-01-mendeleev-thumbnail.png"
-    class="preview" alt="mendeleev">
-  </a>
-  <figcaption>A view of the periodic table at the time of writing.</figcaption>
-</figure>
+{% include figure.html src="mendeleev.png"
+caption="A view of the periodic table at the time of writing." %}
 
 ### Features
 
@@ -90,23 +84,23 @@ a card containing general information about the element and an atomic model of
 the element. Click on an element to be taken to a comprehensive profile of the
 selected element.
 
-{% include figure.html src="mendeleev-element-hover-720.png"
+{% include figure.html src="mendeleev-element-hover.png"
 caption="Hovering over an element reveals a card containing general
 information." %}
 
-{% include figure.html src="mendeleev-element-profile-1080.png"
+{% include figure.html src="mendeleev-element-profile.png"
 caption="Silicon's profile." %}
 
 Hover over an element category in the navigation bar to emphasize elements of
 the selected type of element on the periodic table. Click on an element category
 to be taken to a profile of the selected element category.
 
-{% include figure.html src="mendeleev-element-category-hover-720.png"
+{% include figure.html src="mendeleev-element-category-hover.png"
 caption="Hovering over an element category emphasizes it on the periodic
 table."
 %}
 
-{% include figure.html src="mendeleev-element-category-profile-720.png"
+{% include figure.html src="mendeleev-element-category-profile.png"
 caption="The noble gases' profile." %}
 
 ### Design
@@ -120,7 +114,7 @@ I chose to use Roboto Condensed for its modern design and capability to cram a
 bunch of information into small amounts of space. It's a condensed font after
 all.
 
-{% include figure.html src="roboto-condensed-sample-720.png"
+{% include figure.html src="roboto-condensed-sample.png"
 caption="Samples of Roboto Condensed." %}
 
 I selected colors from the Tailwind CSS color pallette for its vibrant, friendly

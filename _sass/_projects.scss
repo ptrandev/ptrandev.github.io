@@ -8,7 +8,7 @@
     flex-direction: column;
     width: calc(100% - (#{$spacing-sm} * 2));
     margin: 0 $spacing-md $spacing-md 0;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: $shadow-1;
     background-color: $white-color-light;
 
     .project__content {

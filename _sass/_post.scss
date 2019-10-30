@@ -1,0 +1,46 @@
+.post {
+
+  width: 100%;
+  max-width: $container-width-md;
+  margin: auto 0;
+
+  .post__toc {
+    padding-top: $spacing-sm;
+    border-top: $spacing-xs solid $black-color;
+    border-bottom: $spacing-xs solid $black-color;
+  }
+
+  .post__image {
+    box-shadow: $shadow-1;
+
+    figcaption {
+      font-size: $small-font-size;
+      padding: $spacing-md;
+      background-color: $white-color-light;
+      text-align: center;
+    }
+  }
+
+  .color-tiles {
+    display: flex;
+    flex-wrap: wrap;
+
+    .color-tile {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 17.5rem;
+      width: 25%;
+      box-shadow: $shadow-1;
+      margin: $spacing-md;
+    
+      .color-tile__info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: $white-color-light;
+        padding: $spacing-sm $spacing-sm;
+      }
+    }
+  }
+}
