@@ -19,10 +19,6 @@ github_username: ptrandev
 # Build settings
 markdown: kramdown
 
-# Kramdown settings
-kramdown:
-  parse_block_html: true
-
 # Collections
 collections:
   projects:
