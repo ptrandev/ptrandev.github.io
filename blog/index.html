@@ -2,15 +2,17 @@
 layout: default
 ---
 
+<div class="content content--md">
+
 <div class="title">
   <h1>Blog</h1>
-  <p>Things worth mentioning in my life.</p>
+  <p>Things worth mentioning.</p>
 </div>
 
-<div class="content">
   <div class="posts">
     {% for post in paginator.posts %}
-    <article class="post">
+    <article class="post--card">
+      <!--
       <div class="post__categories">
         {% for categories in post.categories %}
         <span>
@@ -18,7 +20,7 @@ layout: default
         </span>
         {% endfor %}
       </div>
-
+      -->
       <div class="post__title">
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
@@ -35,4 +37,5 @@ layout: default
     </article>
     {% endfor %}
   </div>
+
 </div>

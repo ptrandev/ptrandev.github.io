@@ -19,6 +19,14 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+html {
+    font-size: 10px;
+
+    @include for-md {
+        font-size: 9px;
+    }
+}
+
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
@@ -31,6 +39,7 @@ body {
     font-kerning: normal;
     display: flex;
 }
+
 
 
 
@@ -123,13 +132,10 @@ h6 {
 a {
     color: $brand-color;
     text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+    transition: color 0.15s ease-out, text-decoration 0.15s ease-out;
 
     &:hover {
-        color: lighten($brand-color, 15%);
+        color: $accent-color;
         text-decoration: underline;
     }
 }
@@ -200,8 +206,19 @@ pre {
     padding: $spacing-xl;
 }
 
-.container--md {
+/**
+ * Content
+ */
+.content--md {
+    width: 100%;
     max-width: $container-width-md;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: $container-width-md) {
+    .container {
+        padding: $spacing-md;
+    }
 }
 
 /**
