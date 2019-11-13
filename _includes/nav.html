@@ -1,4 +1,13 @@
-<div class="nav">
+{% if page.url == "/" %}
+  {% assign nav_page = "nav--home" %}
+{% elsif page.url contains "projects" %}
+  {% assign nav_page = "nav--projects" %}
+{% elsif page.url contains "blog" %}
+  {% assign nav_page = "nav--blog" %}
+{% endif %}
+
+
+<div class="nav {{ nav_page }}">
   <div class="nav__title">
     <h1>Phillip Tran</h1>
     <span>Student + Developer</span>

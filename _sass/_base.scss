@@ -127,16 +127,43 @@ h6 {
 
 
 /**
- * Links
+ * Links - with underline animation from https://github.com/IanLunn/Hover
  */
 a {
     color: $brand-color;
     text-decoration: none;
-    transition: color 0.15s ease-out, text-decoration 0.15s ease-out;
+    transition: color 0.15s ease-out;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0) translateY(-2px);
+    transform: perspective(1px) translateZ(0) translateY(-2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
 
     &:hover {
         color: $accent-color;
-        text-decoration: underline;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: $accent-color;
+        height: 2px;
+        -webkit-transition-property: right;
+        transition-property: right;
+        -webkit-transition-duration: 0.15s;
+        transition-duration: 0.15s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover:before, &:focus:before, &:active:before {
+        right: 0;
     }
 }
 
