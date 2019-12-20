@@ -6,8 +6,8 @@
 
   .post__toc {
     padding-top: $spacing-sm;
-    border-top: $spacing-xs solid $black-color;
-    border-bottom: $spacing-xs solid $black-color;
+    border-top: 1px solid $black-color;
+    border-bottom: 1px solid $black-color;
     margin: $spacing-md 0;
   }
 
@@ -23,8 +23,8 @@
   }
 
   .color-pallette {
-    border-top: $spacing-xs solid $black-color;
-    border-bottom: $spacing-xs solid $black-color;
+    border-top: 1px solid $black-color;
+    border-bottom: 1px solid $black-color;
     padding: $spacing-md 0;
     margin-bottom: $spacing-md;
 
