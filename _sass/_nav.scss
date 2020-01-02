@@ -7,7 +7,8 @@
   max-width: 300px;
   height: 100vh;
   background-size: cover;
-  background-image: linear-gradient(rgba($black-color, 0.75), rgba($black-color, 0.75)), url("/img/home.jpg");
+  background-image: linear-gradient(rgba($black-color, 0.75), rgba($black-color, 0.75)),
+  url("https://res.cloudinary.com/donutdeflector/image/upload/h_720,f_auto,q_auto:low,fl_progressive/v1577645297/ptran.dev/home.jpg");
   background-position: center;
   background-repeat: no-repeat;
   padding: $spacing-lg;
@@ -26,23 +27,44 @@
   }
 
   .nav__menu {
+    flex-grow: 1;
+
     ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
     }
+
     li {
       font-size: $h3-font-size;
+    }
+  }
+
+  .nav__social {
+    margin-top: $spacing-md;
+
+    ul {
+      padding-top: $spacing-md;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: $spacing-xs;
     }
   }
 }
 
 .nav--projects {
-  background-image: linear-gradient(rgba($black-color, 0.75), rgba($black-color, 0.75)), url("/img/projects.jpg");
+  background-image: linear-gradient(rgba($black-color, 0.75), rgba($black-color, 0.75)),
+  url("https://res.cloudinary.com/donutdeflector/image/upload/h_720,f_auto,q_auto:low,fl_progressive/v1577645297/ptran.dev/projects.jpg");
 }
 
 .nav--blog {
-  background-image: linear-gradient(rgba($black-color, 0.75), rgba($black-color, 0.75)), url("/img/blog.jpg");
+  background-image: linear-gradient(rgba($black-color, 0.75), rgba($black-color, 0.75)),
+  url("https://res.cloudinary.com/donutdeflector/image/upload/h_720,f_auto,q_auto:low,fl_progressive/v1577645297/ptran.dev/blog.jpg");
 }
 
 @media screen and (max-width: $container-width-md) {

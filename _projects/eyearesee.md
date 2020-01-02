@@ -5,7 +5,7 @@ tags: ['html/css', 'flask']
 meta:
   featured: false
   date: 2018 Q3
-  hero: /img/projects/eyearesee-hero.png
+  hero: eyearesee-hero.png
   site: https://eyearesee.herokuapp.com
   code: https://github.com/DonutDeflector/eyearesee
 ---

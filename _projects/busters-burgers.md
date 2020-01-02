@@ -5,7 +5,7 @@ tags: ['html/css']
 meta:
   featured: true
   date: 2018 Q3
-  hero: /img/projects/busters-burgers-hero.jpg
+  hero: busters-burgers-hero.jpg
   site: https://ptrandev.github.io/busters-burgers
   code: https://github.com/DonutDeflector/busters-burgers
 ---

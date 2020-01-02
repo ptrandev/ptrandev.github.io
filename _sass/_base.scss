@@ -59,10 +59,11 @@ ul, ol, dl, figure,
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 0;
 }
-
 
 
 /**
@@ -230,7 +231,7 @@ pre {
     width: 100%;
     max-width: $container-width-xl;
     margin: 0 auto;
-    padding: $spacing-xl;
+    padding: $spacing-lg;
 }
 
 /**

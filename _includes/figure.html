@@ -1,7 +1,11 @@
 <figure class="post__image">
-  <img src="/img/posts/{{page.date | date: '%Y-%m-%d'}}-{{include.src}}"
-  class="preview" alt="{{include.caption}}">
-  <figcaption>
-    {{ include.caption }}
-  </figcaption>
+<figure class="progressive">
+  <img class="progressive__img progressive--not-loaded"
+  data-progressive="https://res.cloudinary.com/donutdeflector/image/upload/w_768,f_auto,q_auto/v1577645297/ptran.dev/posts/{{page.date | date: '%Y-%m-%d'}}-{{include.src}}"
+  src="https://res.cloudinary.com/donutdeflector/image/upload/w_16,q_90/v1577645297/ptran.dev/posts/{{page.date | date: '%Y-%m-%d'}}-{{include.src}}"
+  alt="{{include.caption}}">
+</figure>
+<figcaption>
+  {{ include.caption }}
+</figcaption>
 </figure>

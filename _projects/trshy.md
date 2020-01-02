@@ -5,7 +5,7 @@ tags: ['html/css', 'django', 'postgres']
 meta:
   featured: true
   date: 2018 Q4
-  hero: /img/projects/trshy-hero.jpg
+  hero: trshy-hero.jpg
   site: https://trshy.tech
   code: https://github.com/trshy/trshy
 ---

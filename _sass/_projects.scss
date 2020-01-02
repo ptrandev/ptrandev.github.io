@@ -7,9 +7,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: $spacing-md;
+    margin-bottom: $spacing-lg;
     box-shadow: $shadow-1;
     background-color: $white-color-light;
+
+    .project__image {
+      width: 100%;
+    }
 
     .project__content {
       display: flex;
@@ -42,7 +46,7 @@
     .project__links {
 
       margin-top: auto;
-      border-top: 2px solid $black-color;
+      border-top: 1px solid $black-color;
       padding-top: $spacing-md;
 
       a {
@@ -77,18 +81,18 @@
 
   @media screen and (min-width: $container-width-lg) {
     .project {
-      width: calc(50% - (#{$spacing-md}));
+      width: calc(50% - (#{$spacing-lg}));
     }
 
     .project:nth-child(odd) {
-      margin-right: $spacing-md;
+      margin-right: $spacing-lg;
     }
   }
 
   @media screen and (min-width: $container-width-xl) {
     .project {
-      width: calc(33% - (#{$spacing-md}));
-      margin-right: $spacing-md;
+      width: calc(33% - (#{$spacing-lg}));
+      margin-right: $spacing-lg;
     }
 
     .project:nth-child(3n) {

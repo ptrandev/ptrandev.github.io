@@ -13,7 +13,7 @@ project.
 
 Because I was taking chemistry in school and had a life-long love of science, I
 decided to create an
-[interactive periodic table](https://donutdeflector.me/mendeleev).
+[interactive periodic table](https://ptrandev.github.io/mendeleev).
 
 At first I was using vanilla HTML/CSS and jQuery. However, I soon realized that
 this was beyond sub-optimal. In an effort to maximize development speed and pick

@@ -5,7 +5,7 @@ tags: ['html/css', 'javascript']
 meta:
   featured: false
   date: 2017 Q4
-  hero: /img/projects/donutdeflector-hero.jpg
+  hero: donutdeflector-hero.jpg
   site: https://donutdeflector.me/
   code: https://github.com/DonutDeflector/donutdeflector.github.io
 ---

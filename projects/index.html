@@ -16,7 +16,11 @@ layout: default
     <div class="project">
 
       <div class="project__image">
-        <img src="{{ project.meta.hero }}" alt="{{project.title}} hero image">
+        <figure class="progressive">
+          <img class="progressive__img progressive--not-loaded"
+          data-progressive="https://res.cloudinary.com/donutdeflector/image/upload/h_480,f_auto,q_auto:/v1577645297/ptran.dev/projects/{{project.meta.hero}}"
+          src="https://res.cloudinary.com/donutdeflector/image/upload/w_16,q_auto:low/v1577645297/ptran.dev/projects/{{project.meta.hero}}">
+        </figure>
       </div>
 
       <div class="project__content">

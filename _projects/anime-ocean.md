@@ -5,7 +5,7 @@ tags: ['html/css']
 meta:
   featured: false
   date: 2017 Q3
-  hero: /img/projects/anime-ocean-hero.jpg
+  hero: anime-ocean-hero.jpg
   site: https://donutdeflector.me/anime-ocean/
   code: https://github.com/DonutDeflector/anime-ocean
 ---
