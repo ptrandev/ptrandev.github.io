@@ -28,7 +28,7 @@
     window.scrollTo(0, 0);
   })
 
-  document.addEventListener('swup:transitionEnd', function () {
+  document.addEventListener('swup:contentReplaced', function () {
     progressively.init()
     window.scrollTo(window.scrollX, window.scrollY - 1);
     window.scrollTo(window.scrollX, window.scrollY + 1);
