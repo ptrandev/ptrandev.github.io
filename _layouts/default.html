@@ -8,7 +8,7 @@
     {% include nav.html %}
 
     <div class="wrapper">
-        <div class="container">
+        <div id="swup" class="container transition-fade">
           {{ content }}
         
           <!-- {% include footer.html %} -->
@@ -17,6 +17,24 @@
   </body>
 
   <script>
+  const options = {
+    scroll: false
+  }
+  
+  const swup = new Swup(options);
+
+  // scroll to top of page before replacing content
+  document.addEventListener('swup:willReplaceContent', event => {
+    window.scrollTo(0, 0);
+  })
+
+  document.addEventListener('swup:transitionEnd', function () {
+    progressively.init()
+    window.scrollTo(window.scrollX, window.scrollY - 1);
+    window.scrollTo(window.scrollX, window.scrollY + 1);
+  })
+
   progressively.init()
+  progressively.render()
   </script>
 </html>
