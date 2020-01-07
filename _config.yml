@@ -9,11 +9,9 @@
 title: Phillip Tran
 email: ptrandev@protonmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Portfolio Site of Phillip Tran: High School Student and Full Stack Developer.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://hereto.dev" # the base hostname & protocol for your site
+url: "http://ptran.dev" # the base hostname & protocol for your site
 github_username: ptrandev
 instagram_username: ptrandev
 
