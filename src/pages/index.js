@@ -8,42 +8,15 @@ export default function Home({ data }) {
   return (
     <Layout>
       <div>
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          Amazing Pandas Eating Things
-        </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
-                {node.frontmatter.title}{" "}
-                <span
-                  css={css`
-                    color: #555;
-                  `}
-                >
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
-        ))}
+        <h2>
+          Hi, I'm Phillip.
+        </h2>
+        <p>
+        I'm a high school student with an interest in computer science and
+        biology. I'm a founding member of Forvava, a startup aiming to help
+        people rent/lease storage and parking space. If I'm not programming,
+        you'll probably find me making music or listening to podcasts.
+        </p>
       </div>
     </Layout>
   )

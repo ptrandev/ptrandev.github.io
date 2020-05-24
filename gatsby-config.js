@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`,
+    title: `Phillip Tran`,
   },
   plugins: [
     {
@@ -24,5 +24,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-  ],
+    `gatsby-plugin-sass`
+  ]
 }
