@@ -8,9 +8,9 @@ export default function Home({ data }) {
   return (
     <Layout>
       <div>
-        <h2>
+        <h1>
           Hi, I'm Phillip.
-        </h2>
+        </h1>
         <p>
         I'm a high school student with an interest in computer science and
         biology. I'm a founding member of Forvava, a startup aiming to help
