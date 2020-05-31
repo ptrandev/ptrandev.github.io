@@ -16,7 +16,7 @@ kirkhamTheme.googleFonts = [
 kirkhamTheme.headerWeight = 800
 kirkhamTheme.blockMarginBottom = 1
 kirkhamTheme.baseLineHeight = 1.5
-kirkhamTheme.overrideThemeStyles = ({rhythm}, options, styles) => ({
+kirkhamTheme.overrideThemeStyles = () => ({
   a: {
     color: "#3a4de8"
   }
