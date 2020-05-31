@@ -15,6 +15,14 @@ min-height: 100vh;
 flex-direction: column;
 `
 
+const Content = styled.div`
+margin: 0 auto;
+max-width: 768px;
+padding: ${rhythm(1)};
+padding-top: ${rhythm(1.5)};
+flex: 1;
+`
+
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`
@@ -30,19 +38,11 @@ export default function Layout({ children }) {
   return (
     <Container>
       <Navbar
-        navbarTitle="Phillip Tran"
+        navbarTitle={data.site.siteMetadata.title}
       />
-      <div
-        css={css`
-        margin: 0 auto;
-        max-width: 768px;
-        padding: ${rhythm(1)};
-        padding-top: ${rhythm(1.5)};
-        flex: 1;
-        `}
-      >
+      <Content>
         {children}
-      </div>
+      </Content>
       <Footer
         CopyrightYear="MMXX"
       />
