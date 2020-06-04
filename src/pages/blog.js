@@ -1,50 +1,36 @@
 import React from "react"
 import { css } from "@emotion/core"
+import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 
+import { Card, CardTitle, CardExcerpt, CardSubtitle } from "../components/Card/Card"
+
 export default function Blog({ data }) {
   return (
     <Layout>
-      <div>
-        <h2
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          Amazing Pandas Eating Things
-        </h2>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
+      <h1>
+        Blog
+      </h1>
+
+      <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id}>
+          <Card link={node.fields.slug}>
+              <CardTitle>
                 {node.frontmatter.title}{" "}
-                <span
-                  css={css`
-                    color: #555;
-                  `}
-                >
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
-        ))}
-      </div>
+              </CardTitle>
+              <CardSubtitle>
+                {node.frontmatter.date}
+              </CardSubtitle>
+              <CardExcerpt>
+                {node.excerpt}
+              </CardExcerpt>
+          </Card>
+        </div>
+      ))}
     </Layout>
   )
 }

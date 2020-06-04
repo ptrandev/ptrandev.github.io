@@ -6,7 +6,7 @@ import { rhythm } from "../../utils/typography"
 import NavbarLinks from "./NavbarLinks"
 
 const NavbarElement = styled.nav`
-border-top: 10px solid #3a4de8;
+border-top: ${rhythm(0.25)} solid #3a4de8;
 padding: ${rhythm(0.5)} 0 ${rhythm(0.75)} 0;
 box-shadow: 0 0 1rem rgba(0,0,0,0.15);
 `
