@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+import { Global, css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../utils/typography"
-import "../styles/global.scss"
+import colors from "../styles/colors"
 
 import Navbar from "./Navbar/Navbar"
 import Footer from "./Footer/Footer"
@@ -36,16 +36,30 @@ export default function Layout({ children }) {
     `
   )
   return (
-    <Container>
-      <Navbar
-        navbarTitle={data.site.siteMetadata.title}
+    <div>
+      <Global
+        styles={css`
+          * {
+            box-sizing: border-box;
+          }
+          
+          html {
+            background-color: ${colors.white};
+            color: ${colors.black};
+          }
+        `}
       />
-      <Content>
-        {children}
-      </Content>
-      <Footer
-        CopyrightYear="MMXX"
-      />
-    </Container>
+      <Container>
+        <Navbar
+          navbarTitle={data.site.siteMetadata.title}
+        />
+        <Content>
+          {children}
+        </Content>
+        <Footer
+          CopyrightYear="MMXX"
+        />
+      </Container>
+    </div>
   )
 }

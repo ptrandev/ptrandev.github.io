@@ -1,9 +1,7 @@
 import Typography from "typography"
 import kirkhamTheme from "typography-theme-kirkham"
 
-import styles from "../styles/_variables.scss"
-
-console.log(styles)
+import colors from "../styles/colors"
 
 kirkhamTheme.headerFontFamily = ["Inter", "Helvetica", "sans-serif"]
 kirkhamTheme.bodyFontFamily = ["Inter", "Helvetica", "sans-serif"]
@@ -18,11 +16,11 @@ kirkhamTheme.blockMarginBottom = 1
 kirkhamTheme.baseLineHeight = 1.5
 kirkhamTheme.overrideThemeStyles = () => ({
   a: {
-    color: "#3a4de8"
+    color: `${colors.primary}`
   }
 })
-kirkhamTheme.headerColor = "#191919"
-kirkhamTheme.bodyColor = "#191919"
+kirkhamTheme.headerColor = `${colors.black}`
+kirkhamTheme.bodyColor = `${colors.black}`
 
 const typography = new Typography(kirkhamTheme)
 

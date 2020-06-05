@@ -20,6 +20,10 @@ transition-property: box-shadow;
 
 const CardBody = styled.div`
 padding: ${rhythm(1)};
+
+> *:last-child {
+  margin-bottom: 0;
+}
 `
 
 const LinkCard = styled.a`
@@ -35,9 +39,6 @@ const CardSubtitle = styled.h5`
 margin-bottom: ${rhythm(0.5)};
 `
 
-const CardExcerpt = styled.p`
-margin-bottom: 0;
-`
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
   condition ? wrapper(children) : children;
 
@@ -59,6 +60,5 @@ const Card = (props) => {
 export {
   Card,
   CardTitle,
-  CardSubtitle,
-  CardExcerpt
+  CardSubtitle
 }
