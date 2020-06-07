@@ -10,7 +10,6 @@ export default function Blog({ data }) {
       <h1>
         Blog
       </h1>
-
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Card link={node.fields.slug}>
