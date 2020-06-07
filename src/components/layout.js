@@ -17,6 +17,7 @@ flex-direction: column;
 
 const Content = styled.div`
 margin: 0 auto;
+width: 100%;
 max-width: 768px;
 padding: ${rhythm(1)};
 padding-top: ${rhythm(1.5)};
