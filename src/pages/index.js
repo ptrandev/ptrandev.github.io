@@ -11,9 +11,9 @@ export default function Home() {
         Hi, I'm Phillip.
       </h1>
       <p>
-      I'm a high school student with an interest in computer science and
-      biology. I'm a founding member of Forvava, a startup aiming to help
-      people rent/lease storage and parking space. If I'm not programming,
+      I'm an incoming freshman at Boston University with an interest in computer
+      science and biology. I'm a founding member of Forvava, a startup aiming to
+      help people rent/lease storage and parking space. If I'm not programming,
       you'll probably find me making music or listening to podcasts.
       </p>
     </Layout>

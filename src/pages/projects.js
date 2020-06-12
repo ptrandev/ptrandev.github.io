@@ -76,7 +76,7 @@ span {
   border: 1px solid ${colors.black};
   margin-right: ${rhythm(0.25)};
   margin-bottom: ${rhythm(0.25)};
-  padding: ${rhythm(0.15)} ${rhythm(0.25)};
+  padding: ${rhythm(0.125)} ${rhythm(0.25)};
 }
 
 span:last-child {
