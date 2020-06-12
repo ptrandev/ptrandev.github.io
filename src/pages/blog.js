@@ -1,5 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { jsx, css } from "@emotion/core"
+import styled from "@emotion/styled"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
 import { Card, CardTitle, CardSubtitle } from "../components/Card/Card"
@@ -12,7 +14,14 @@ export default function Blog({ data }) {
       </h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
-          <Card link={node.fields.slug}>
+          <Link
+            css={{
+              color: 'inherit',
+              textDecoration: 'inherit'
+            }}
+            to={node.fields.slug}
+          >
+          <Card>
               <CardTitle>
                 {node.frontmatter.title}{" "}
               </CardTitle>
@@ -23,6 +32,7 @@ export default function Blog({ data }) {
                 {node.excerpt}
               </p>
           </Card>
+          </Link>
         </div>
       ))}
     </Layout>
@@ -32,7 +42,7 @@ export default function Blog({ data }) {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: {regex : "\/blog/"} },
+      filter: {fileAbsolutePath: {regex: "/blog/"}},
       sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
@@ -40,7 +50,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date
           }
           fields {
             slug

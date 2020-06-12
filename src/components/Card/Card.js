@@ -4,6 +4,9 @@ import styled from "@emotion/styled"
 import { rhythm } from "../../utils/typography"
 
 const CardElement = styled.div`
+display: flex;
+flex-direction: column;
+height: 100%;
 box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 background: #fff;
 transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -19,6 +22,9 @@ transition-property: box-shadow;
 `
 
 const CardBody = styled.div`
+display: flex;
+flex-direction: column;
+flex: 1;
 padding: ${rhythm(1)};
 
 > *:last-child {
@@ -39,6 +45,14 @@ const CardSubtitle = styled.h5`
 margin-bottom: ${rhythm(0.5)};
 `
 
+const CardImgElement = styled.div`
+width: 100%;
+
+img {
+  margin: 0;
+}
+`
+
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
   condition ? wrapper(children) : children;
 
@@ -49,6 +63,11 @@ const Card = (props) => {
       wrapper = {children => <LinkCard href={props.link}>{children}</LinkCard>}
     >
       <CardElement>
+        {props.src &&
+          <CardImgElement>
+            <img src={props.src} alt={props.alt}></img>
+          </CardImgElement>
+        }
         <CardBody>
           {props.children}
         </CardBody>

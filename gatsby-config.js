@@ -13,7 +13,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src`
       },
     },
     `gatsby-transformer-remark`,
@@ -24,6 +24,13 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-page-transitions`,
+    {
+      resolve: `gatsby-plugin-page-transitions`,
+      options : {
+        transitionTime: 300
+      }
+    }
   ]
 }

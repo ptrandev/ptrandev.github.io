@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
+import PageTransition from 'gatsby-plugin-page-transitions'
 import { rhythm } from "../utils/typography"
 import colors from "../styles/colors"
 
@@ -55,7 +56,30 @@ export default function Layout({ children }) {
           navbarTitle={data.site.siteMetadata.title}
         />
         <Content>
+          <PageTransition
+            defaultStyle={{
+              transition: 'opacity 0.15s cubic-bezier(0.35, 0.055, 0.675, 0.19), transform 0.15s cubic-bezier(0.19, 1, 0.22, 1)',
+              transform: `translateY(5rem)`,
+              opacity: 0
+            }}
+            transitionStyles={{
+              entering: {
+                opacity: 0,
+                transform: `translateY(5rem)`
+              },
+              entered: {
+                opacity: 1,
+                transform: `translateY(0)`
+              },
+              exiting: {
+                opacity: 0,
+                transform: `translateY(-5rem)`
+              }
+            }}
+            transitionTime={150}
+          >
           {children}
+          </PageTransition>
         </Content>
         <Footer
           CopyrightYear="MMXX"
