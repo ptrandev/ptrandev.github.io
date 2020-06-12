@@ -45,12 +45,8 @@ const CardSubtitle = styled.h5`
 margin-bottom: ${rhythm(0.5)};
 `
 
-const CardImgElement = styled.div`
-width: 100%;
-
-img {
-  margin: 0;
-}
+const CardImg = styled.img`
+margin: 0;
 `
 
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
@@ -64,9 +60,7 @@ const Card = (props) => {
     >
       <CardElement>
         {props.src &&
-          <CardImgElement>
-            <img src={props.src} alt={props.alt}></img>
-          </CardImgElement>
+            <CardImg src={props.src} alt={props.alt}></CardImg>
         }
         <CardBody>
           {props.children}

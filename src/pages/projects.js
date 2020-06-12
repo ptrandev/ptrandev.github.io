@@ -28,8 +28,13 @@ margin-bottom: ${rhythm(1)};
 `
 
 const CardButtons = styled.div`
+display: flex;
+flex-wrap: wrap;
+margin-bottom: ${rhythm(-0.25)} !important;
+
 a {
   text-decoration: none;
+  margin-bottom: ${rhythm(0.25)};
 }
 
 a:first-child {
@@ -61,13 +66,16 @@ a:nth-child(2) {
 `
 
 const CardTags = styled.div`
-margin-bottom: ${rhythm(0.5)};
+display: flex;
+flex-wrap: wrap;
+margin-bottom: ${rhythm(0.25)};
 
 span {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   border: 1px solid ${colors.black};
   margin-right: ${rhythm(0.25)};
+  margin-bottom: ${rhythm(0.25)};
   padding: ${rhythm(0.15)} ${rhythm(0.25)};
 }
 
