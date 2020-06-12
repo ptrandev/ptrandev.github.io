@@ -6,7 +6,7 @@ featured: true
 meta:
   date: 2018 Q4
   hero: trshy-hero.jpg
-  site: https://trshy.tech
+  site: https://trshy.herokuapp.com/
   code: https://github.com/trshy/trshy
 ---
 
