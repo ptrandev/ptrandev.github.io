@@ -26,7 +26,7 @@ padding-top: ${rhythm(1.5)};
 flex: 1;
 `
 
-export default function Layout({ children, props }) {
+export default function Layout( props ) {
   const data = useStaticQuery(
     graphql`
       query {
@@ -84,7 +84,7 @@ export default function Layout({ children, props }) {
             }}
             transitionTime={150}
           >
-          {children}
+          { props.children }
           </PageTransition>
         </Content>
         <Footer
