@@ -31,6 +31,7 @@ module.exports = {
       options : {
         transitionTime: 300
       }
-    }
+    },
+    `gatsby-plugin-react-helmet`
   ]
 }

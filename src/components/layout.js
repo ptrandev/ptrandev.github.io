@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import PageTransition from 'gatsby-plugin-page-transitions'
 import { rhythm } from "../utils/typography"
@@ -39,6 +40,10 @@ export default function Layout({ children }) {
   )
   return (
     <div>
+      <Helmet>
+        <title>Phillip Tran</title>
+        <html lang="en"/>
+      </Helmet>
       <Global
         styles={css`
           * {
