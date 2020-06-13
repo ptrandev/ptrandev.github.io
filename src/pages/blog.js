@@ -27,7 +27,7 @@ export default function Blog({ data }) {
           >
           <Card hover>
               <CardTitle>
-                {node.frontmatter.title}{" "}
+                {node.frontmatter.title}
               </CardTitle>
               <CardSubtitle>
                 {node.frontmatter.date}
