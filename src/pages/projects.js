@@ -108,7 +108,10 @@ export default function Projects({ data }) {
               <CardSubtitle>
                 {node.frontmatter.meta.date}
               </CardSubtitle>
-              <p css={css`flex: 1;`}
+              <p css={css`
+                flex: 1;
+                margin: 0;
+              `}
               >
                 {node.excerpt}
               </p>
