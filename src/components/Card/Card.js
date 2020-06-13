@@ -9,11 +9,10 @@ flex-direction: column;
 height: 100%;
 box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 background: #fff;
-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-transition-property: box-shadow;
+transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
 
 :hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: ${props => props.hover ? `0 0.5rem 1rem rgba(0, 0, 0, 0.15)`: `0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)`};
 }
 
 :last-child {
@@ -58,7 +57,9 @@ const Card = (props) => {
       condition={props.link}
       wrapper = {children => <LinkCard href={props.link}>{children}</LinkCard>}
     >
-      <CardElement>
+      <CardElement
+        hover={props.hover}
+      >
         {props.src &&
             <CardImg src={props.src} alt={props.alt}></CardImg>
         }

@@ -25,7 +25,9 @@ export default function Blog({ data }) {
             }}
             to={node.fields.slug}
           >
-          <Card>
+          <Card
+            hover
+          >
               <CardTitle>
                 {node.frontmatter.title}{" "}
               </CardTitle>
