@@ -6,7 +6,11 @@ import Layout from "../components/layout"
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout
+      title="Home"
+      description="Personal portfolio of Phillip Tran: a freshman at Boston
+      University with an interest in computer science and biology."
+    >
       <h1>
         Hi, I'm Phillip.
       </h1>

@@ -86,7 +86,11 @@ span:last-child {
 
 export default function Projects({ data }) {
   return (
-    <Layout>
+    <Layout
+      title="Projects"
+      description="Personal portfolio of Phillip Tran: a freshman at Boston
+    University with an interest in computer science and biology."
+    >
       <h1>
         Projects
       </h1>

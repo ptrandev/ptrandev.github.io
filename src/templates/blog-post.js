@@ -5,7 +5,11 @@ import Layout from "../components/layout"
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
   return (
-    <Layout>
+    <Layout
+    title={post.frontmatter.title}
+    description="Personal portfolio of Phillip Tran: a freshman at Boston
+    University with an interest in computer science and biology."
+    >
       <div>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

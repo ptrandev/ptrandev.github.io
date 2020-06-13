@@ -26,7 +26,7 @@ padding-top: ${rhythm(1.5)};
 flex: 1;
 `
 
-export default function Layout({ children }) {
+export default function Layout({ children }, props) {
   const data = useStaticQuery(
     graphql`
       query {
@@ -41,8 +41,9 @@ export default function Layout({ children }) {
   return (
     <div>
       <Helmet>
-        <title>Phillip Tran</title>
         <html lang="en"/>
+        <title>{props.title} // Phillip Tran</title>
+        <meta name="description" content={props.description} />
       </Helmet>
       <Global
         styles={css`

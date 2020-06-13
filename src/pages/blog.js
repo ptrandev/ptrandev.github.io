@@ -8,7 +8,11 @@ import { Card, CardTitle, CardSubtitle } from "../components/Card/Card"
 
 export default function Blog({ data }) {
   return (
-    <Layout>
+    <Layout
+      title="Blog"
+      description="Personal portfolio of Phillip Tran: a freshman at Boston
+    University with an interest in computer science and biology."
+    >
       <h1>
         Blog
       </h1>
