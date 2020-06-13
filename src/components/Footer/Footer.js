@@ -9,7 +9,7 @@ const FooterElement = styled.footer`
 background-color: #191919;
 color: #f1f1f1;
 flex-shrink: 0;
-padding: ${rhythm(0.75)} 0 ${rhythm(1)} 0;
+padding: ${rhythm(1)} 0;
 `
 
 const FooterContainer = styled.div`
