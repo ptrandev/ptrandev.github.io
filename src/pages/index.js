@@ -23,12 +23,15 @@ export default function Home() {
       <p>
       Within the world of software enginneering, I am most interest in crafting
       beautiful, functional web applications and developing robust, adaptable
-      computer vision systems for robots. Over the years I have created a number
+      computer vision systems for robots.
+      </p>
+      <p>
+      Over the years I have created a number
       of web applications, which you can check out <Link to="/projects">here</Link>.
       I have also actively participated in FIRST Robotics Competitions alongside
-      my teammates on
+      my teammates on 
       <a href="https://frcpersevere.com/" target="_blank" rel="noopener noreferrer">
-        FRC 5962 PerSEVERE
+        FRC5962 PerSEVERE
       </a>.
       </p>
     </Layout>
