@@ -29,10 +29,7 @@ export default function Home() {
       Over the years I have created a number
       of web applications, which you can check out <Link to="/projects">here</Link>.
       I have also actively participated in FIRST Robotics Competitions alongside
-      my teammates on 
-      <a href="https://frcpersevere.com/" target="_blank" rel="noopener noreferrer">
-        FRC5962 PerSEVERE
-      </a>.
+      my teammates on <a href="https://frcpersevere.com/" target="_blank" rel="noopener noreferrer">FRC5962 PerSEVERE</a>.
       </p>
     </Layout>
   )
