@@ -2,9 +2,9 @@
 layout: project
 title:  Pinocchio's Pizza
 tags: ['html/css', 'django', 'postgres']
-featured: true
+featured: false
 meta:
-  featured: true
+  featured: false
   date: 2018 Q3
   hero: pinocchios-pizza-hero.png
   site: https://pinocchios-pizza.herokuapp.com

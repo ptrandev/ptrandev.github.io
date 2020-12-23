@@ -2,7 +2,7 @@
 layout: project
 title:  Suburban Dictionary
 tags: ['html/css', 'django', 'postgres']
-featured: true
+featured: false
 meta:
   date: 2018 Q3
   hero: suburban-dictionary-hero.png

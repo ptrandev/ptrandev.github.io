@@ -87,22 +87,20 @@ span:last-child {
 export default function Projects({ data }) {
   return (
     <Layout
-      title="Projects"
+      title="Media"
       description="Personal portfolio of Phillip Tran: a freshman at Boston
     University with an interest in computer science and biology."
     >
       <h1>
-        Projects
+        Media
       </h1>
-      <p>
-        Here are a few highlights of things I've built (with code) over the years.
-        Feel free to view more of my projects on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ptrandev">Github</a>.
-      </p>
+      <p>Here are a few highlights of things I've made (without code) over the
+        years.</p>
       <ProjectsContainer>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Project key={node.id}>
             <Card
-              src={`https://res.cloudinary.com/donutdeflector/image/upload/h_480,f_auto,q_auto:/v1608690691/ptran.dev/projects/${node.frontmatter.meta.hero}`}
+              src={`https://res.cloudinary.com/donutdeflector/image/upload/h_480,f_auto,q_auto:/v1577645297/ptran.dev/media/${node.frontmatter.meta.hero}`}
               alt={`${node.frontmatter.title} hero`}
             >
               <CardTags>
@@ -121,18 +119,18 @@ export default function Projects({ data }) {
                 margin: 0;
               `}
               >
-                {node.rawMarkdownBody}
+              {node.rawMarkdownBody}
               </p>
               <hr></hr>
               <CardButtons>
-                {node.frontmatter.meta.site &&
-                  <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.site}>View Site</a>
+                {node.frontmatter.meta.listen &&
+                  <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.listen}>Listen</a>
+                }
+                {node.frontmatter.meta.socials &&
+                  <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.socials}>Socials</a>
                 }
                 {node.frontmatter.meta.video &&
                   <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.video}>View Video</a>
-                }
-                {node.frontmatter.meta.code &&
-                  <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.code}>View Code</a>
                 }
               </CardButtons>
             </Card>
@@ -147,7 +145,7 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       filter: {
-        fileAbsolutePath: {regex: "/projects/"},
+        fileAbsolutePath: {regex: "/media/"},
         frontmatter: {featured: {eq: true}}
       },
       sort: { fields: [frontmatter___meta___date], order: [DESC] }) {
@@ -164,12 +162,14 @@ export const query = graphql`
               code
               video
               hero
+              socials
+              listen
             }
           }
+          rawMarkdownBody
           fields {
             slug
           }
-          rawMarkdownBody
         }
       }
     }
