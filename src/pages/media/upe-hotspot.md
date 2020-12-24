@@ -6,7 +6,7 @@ featured: true
 meta:
   date: 2020 Q4
   hero: upe-hotspot.jpg
-  listen: https://anchor.fm/upe--boston-university
+  listen: https://anchor.fm/upe-hotspot
   socials: https://www.instagram.com/upebu/
 ---
 
