@@ -27,7 +27,7 @@ export default function Home() {
       <p>
         If I'm not programming, you'll find me co-hosting podcasts or making
         music with my band, <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/chaoticsanitymusic/">Chaotic Sanity</a>. Go ahead and
-        check out my media invovlement <Link to="/media">here</Link>.
+        check out my media involvement <Link to="/media">here</Link>.
       </p>
     </Layout>
   )
