@@ -2,7 +2,7 @@
 layout: project
 title:  Volume 2
 tags: ['EP']
-featured: true
+featured: false
 meta:
   date: 2020 Q3
   hero: volume-2.jpg
