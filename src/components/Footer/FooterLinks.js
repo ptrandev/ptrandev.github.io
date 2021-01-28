@@ -7,7 +7,7 @@ const FooterItem = styled.a`
 color: #f1f1f1;
 font-weight: 800;
 text-decoration: none;
-margin-right: ${rhythm(1)};
+margin-right: ${rhythm(0.5)};
 
 :hover {
   text-decoration: underline;
@@ -16,14 +16,18 @@ margin-right: ${rhythm(1)};
 :last-child {
   margin-right: 0;
 }
+
+@media(min-width: 450px) {
+  margin-right: ${rhythm(1)};
+}
 `
 
 const FooterLinks = () => {
   return (
     <>
-      <FooterItem href="mailto:ptrandev@protonmail.com">Email</FooterItem>
-      <FooterItem href="https://github.com/ptrandev">Github</FooterItem>
-      <FooterItem href="https://instagram.com/ptrandev">Instagram</FooterItem>
+        <FooterItem href="https://github.com/ptrandev">Github</FooterItem>
+        <FooterItem href="https://linkedin.com/in/ptrandev">LinkedIn</FooterItem>
+        <FooterItem href="https://instagram.com/ptrandev">Instagram</FooterItem>
     </>
   )
 }
