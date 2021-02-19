@@ -88,7 +88,7 @@ export default function Layout( props ) {
           </PageTransition>
         </Content>
         <Footer
-          CopyrightYear="MMXX"
+          CopyrightYear="MMXXI"
         />
       </Container>
     </div>
