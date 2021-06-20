@@ -55,8 +55,9 @@ export default function Home() {
       <Avatar src="https://res.cloudinary.com/donutdeflector/image/upload/h_300,f_auto,q_auto:/v1608789330/ptran.dev/avatar.jpg"></Avatar>
       <p>
         I'm a freshman at Boston University with an interest in computer science
-        and biology. I'm a founding member of Forvava, a startup aiming to
-        help people rent/lease storage and parking space.
+        and biology. I'm currently working at
+        <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a>
+        as a consultant.
       </p>
       </Introduction>
       <p>
