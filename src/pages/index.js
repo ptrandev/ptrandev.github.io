@@ -56,8 +56,7 @@ export default function Home() {
       <p>
         I'm a freshman at Boston University with an interest in computer science
         and biology. I'm currently working at
-        <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a>
-        as a consultant.
+        <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as a consultant.
       </p>
       </Introduction>
       <p>
