@@ -45,18 +45,17 @@ export default function Home() {
   return (
     <Layout
       title="Home"
-      description="Personal portfolio of Phillip Tran: a freshman at Boston
-      University with an interest in computer science and biology."
+      description="Phillip Tran: Consultant at Atllas, Inc. // Honors Student at Boston University"
     >
       <Greeting>
         Hi, I'm Phillip.
       </Greeting>
       <Introduction>
-      <Avatar src="https://res.cloudinary.com/donutdeflector/image/upload/h_300,f_auto,q_auto:/v1608789330/ptran.dev/avatar.jpg"></Avatar>
-      <p>
-        I'm a freshman at Boston University with an interest in computer science
-        and biology. I'm currently working at <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as a consultant.
-      </p>
+        <Avatar src="https://res.cloudinary.com/donutdeflector/image/upload/h_300,f_auto,q_auto:/v1608789330/ptran.dev/avatar.jpg"></Avatar>
+        <p>
+          I am an honors student at Boston University studying computer science.
+          I'm currently working at <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as a consultant.
+        </p>
       </Introduction>
       <p>
         Within the world of software enginneering, I am most interest in crafting
@@ -64,8 +63,13 @@ export default function Home() {
         computer vision systems for robots. Feel free to check out my projects <Link to="/projects">here</Link>.
       </p>
       <p>
+        I am heavily involved in student organizations.
+        I'm serving as the Director of Marketing in <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a
+        computer science honor society. I am also the team captain of the Boston University Valorant B Team.
+      </p>
+      <p>
         If I'm not programming, you'll find me co-hosting podcasts or making
-        music with my band, <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/chaoticsanitymusic/">Chaotic Sanity</a>. Go ahead and
+        music with my band, <a target="_blank" rel="noopener noreferrer" href="http://offx.one">offx1</a>. Go ahead and
         check out my media involvement <Link to="/media">here</Link>.
       </p>
     </Layout>
