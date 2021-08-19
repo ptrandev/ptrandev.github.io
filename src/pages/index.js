@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <Layout
       title="Home"
-      description="Phillip Tran: Consultant at Atllas, Inc. // Honors Student at Boston University"
+      description="Phillip Tran: Full Stack Developer at Atllas, Inc. // Honors Student at Boston University"
     >
       <Greeting>
         Hi, I'm Phillip.
