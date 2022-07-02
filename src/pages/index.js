@@ -64,8 +64,9 @@ export default function Home() {
       </p>
       <p>
         I am heavily involved in student organizations.
-        I'm serving as the Director of Marketing in <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a
-        computer science honor society. I am also the team captain of the Boston University Valorant B Team.
+        I am the Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/" BUILDS</a>, a student run hackerspace.
+        I have served as the Director of Marketing in <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a
+        computer science honor society. I am also a former team captain of the Boston University Valorant B Team.
       </p>
       <p>
         If I'm not programming, you'll find me co-hosting podcasts or making
