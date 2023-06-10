@@ -71,6 +71,9 @@ export default function Home() {
       <p>
         If I'm not programming, you'll find me working on my music or co-hosting podcasts. Go ahead and check out my media involvement <Link to="/media">here</Link>.
       </p>
+      <p>
+        Outside of these things, I enjoy personal finance, fitness, cooking, and watches. I love staying curious!
+      </p>
     </Layout>
   )
 }
