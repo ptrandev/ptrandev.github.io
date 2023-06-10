@@ -2,7 +2,7 @@
 layout: project
 title: Buster's Burgers
 tags: ['html/css']
-featured: true
+featured: false
 meta:
   date: 2018 Q3
   hero: busters-burgers-hero.jpg

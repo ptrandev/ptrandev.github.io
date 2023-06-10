@@ -6,7 +6,6 @@ featured: false
 meta:
   date: 2020 Q2
   hero: severescout.jpg
-  site: https://severescout.herokuapp.com/
   code: https://github.com/ptrandev/SEVEREscout
 ---
 

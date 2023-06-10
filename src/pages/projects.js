@@ -131,6 +131,10 @@ export default function Projects({ data }) {
                 {node.frontmatter.meta.video &&
                   <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.video}>View Video</a>
                 }
+                {
+                  node.frontmatter.meta.figma &&
+                  <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.figma}>View Figma</a>
+                }
                 {node.frontmatter.meta.code &&
                   <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.code}>View Code</a>
                 }
@@ -164,6 +168,7 @@ export const query = graphql`
               code
               video
               hero
+              figma
             }
           }
           fields {

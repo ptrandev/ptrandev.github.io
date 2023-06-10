@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  Mendeleev
-tags: ['html/css', 'javascript', 'vue']
+tags: ['vue']
 featured: true
 meta:
   date: 2018 Q1
