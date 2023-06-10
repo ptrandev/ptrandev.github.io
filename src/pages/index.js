@@ -53,25 +53,23 @@ export default function Home() {
       <Introduction>
         <Avatar src="https://res.cloudinary.com/donutdeflector/image/upload/h_300,f_auto,q_auto:/v1664390255/ptran.dev/headshot.jpg"></Avatar>
         <p>
-          I am an honors student at Boston University studying computer science.
-          I'm currently working at <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as a full stack developer.
+          I am a graduate student at Boston University studying computer science.
+          I'm currently working at <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as a full stack developer, where I develop tools that enable billions of dollars worth of real estate transactions.
         </p>
       </Introduction>
       <p>
-        Within the world of software enginneering, I am most interest in crafting
+        Within the world of software engineering, I am most interest in crafting
         beautiful, functional web applications and developing robust, adaptable
-        computer vision systems for robots. Feel free to check out my projects <Link to="/projects">here</Link>.
+        computer vision systems for robots. Check out my personal projects <Link to="/projects">here</Link>.
       </p>
       <p>
         I am heavily involved in student organizations.
         I am the Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/">BUILDS</a>, a student run hackerspace.
         I have served as the Director of Marketing in <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a
-        computer science honor society. I am also a former team captain of the Boston University Valorant B Team.
+        computer science honor society.
       </p>
       <p>
-        If I'm not programming, you'll find me co-hosting podcasts or making
-        music with my band, <a target="_blank" rel="noopener noreferrer" href="http://offx.one">offx1</a>. Go ahead and
-        check out my media involvement <Link to="/media">here</Link>.
+        If I'm not programming, you'll find me working on my music or co-hosting podcasts. Go ahead and check out my media involvement <Link to="/media">here</Link>.
       </p>
     </Layout>
   )
