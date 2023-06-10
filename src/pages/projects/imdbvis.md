@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  IMDBvis
-tags: ['flask', 'postgres', 'ML']
+tags: ['flask', 'postgres', 'python']
 featured: true
 meta:
   date: 2019 Q3
