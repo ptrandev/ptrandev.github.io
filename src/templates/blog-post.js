@@ -7,8 +7,7 @@ export default function BlogPost({ data }) {
   return (
     <Layout
     title={post.frontmatter.title}
-    description="Personal portfolio of Phillip Tran: a freshman at Boston
-    University with an interest in computer science and biology."
+    description="Personal portfolio of Phillip Tran"
     >
       <div>
         <h1>{post.frontmatter.title}</h1>

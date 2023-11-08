@@ -88,8 +88,7 @@ export default function Projects({ data }) {
   return (
     <Layout
       title="Projects"
-      description="Personal portfolio of Phillip Tran: a freshman at Boston
-    University with an interest in computer science and biology."
+      description="Personal portfolio of Phillip Tran"
     >
       <h1>
         Projects

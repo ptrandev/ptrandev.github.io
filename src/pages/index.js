@@ -53,10 +53,16 @@ export default function Home() {
       <Introduction>
         <Avatar src="https://res.cloudinary.com/donutdeflector/image/upload/h_300,f_auto,q_auto:/v1664390255/ptran.dev/headshot.jpg"></Avatar>
         <p>
-          I am a graduate student at Boston University studying computer science.
+          I am a BA/MS student at Boston University studying computer science.
           I'm currently working at <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as a full stack developer, where I develop tools that enable billions of dollars worth of real estate transactions.
         </p>
       </Introduction>
+      <p>
+        I have a passion for conducting interdisciplinary research. I am currently
+        working on a project with Professor Phillip Lobel and his marine biology
+        lab at BU to develop an application that categorizes and analyzes millions
+        of videos and photos on-device. Check out my research involvement <Link to="/research">here</Link>.
+      </p>
       <p>
         Within the world of software engineering, I am most interest in crafting
         beautiful, functional web applications and developing robust, adaptable
@@ -64,12 +70,9 @@ export default function Home() {
       </p>
       <p>
         I am heavily involved in student organizations.
-        I am the Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/">BUILDS</a>, a student run hackerspace.
+        I am the Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/">BUILDS</a>, a student run hackerspace which also serves at BU's official Association for Computing Machinery (ACM) chapter.
         I have served as the Director of Marketing in <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a
         computer science honor society.
-      </p>
-      <p>
-        If I'm not programming, you'll find me working on my music or co-hosting podcasts. Go ahead and check out my media involvement <Link to="/media">here</Link>.
       </p>
       <p>
         Outside of those things, I enjoy personal finance, fitness, cooking, and watches. I love staying curious!
