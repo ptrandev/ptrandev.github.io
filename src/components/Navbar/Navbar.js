@@ -34,6 +34,7 @@ const NavbarLinksContainer = styled.div`
 display: flex;
 align-items: center;
 margin-top: ${rhythm(0.25)};
+flex-wrap: wrap;
 `
 
 const Navbar = props => {
