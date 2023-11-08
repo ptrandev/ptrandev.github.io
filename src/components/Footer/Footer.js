@@ -24,7 +24,7 @@ padding: 0 ${rhythm(1)};
 `
 
 const Copyright = styled.span`
-margin-top: ${rhythm(0.25)};
+margin-bottom: ${rhythm(0.25)};
 `
 
 const Footer = props => {

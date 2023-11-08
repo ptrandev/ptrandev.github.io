@@ -1,35 +1,44 @@
-import React from "react"
-import styled from "@emotion/styled"
+import React from "react";
+import styled from "@emotion/styled";
 
-import { rhythm } from "../../utils/typography"
+import { rhythm } from "../../utils/typography";
+
+import { LuGithub, LuLinkedin, LuInstagram, LuFileText } from "react-icons/lu";
 
 const FooterItem = styled.a`
-color: #f1f1f1;
-font-weight: 800;
-text-decoration: none;
-margin-right: ${rhythm(0.5)};
+  color: #f1f1f1;
+  font-weight: 800;
+  text-decoration: none;
+  margin-right: ${rhythm(0.5)};
 
-:hover {
-  text-decoration: underline;
-}
+  :hover {
+    text-decoration: underline;
+  }
 
-:last-child {
-  margin-right: 0;
-}
+  :last-child {
+    margin-right: 0;
+  }
 
-@media(min-width: 450px) {
-  margin-right: ${rhythm(1)};
-}
-`
+  vertical-align: middle;
+`;
 
 const FooterLinks = () => {
   return (
     <>
-        <FooterItem href="https://github.com/ptrandev">Github</FooterItem>
-        <FooterItem href="https://linkedin.com/in/ptrandev">LinkedIn</FooterItem>
-        <FooterItem href="https://instagram.com/ptrandev">Instagram</FooterItem>
+      <FooterItem href="https://drive.google.com/file/d/17iHpJ0vyYoUBL6EvWBSxSZhjrdKDjjmX/view?usp=sharing">
+        <LuFileText size='24'></LuFileText>
+      </FooterItem>
+      <FooterItem href="https://github.com/ptrandev">
+        <LuGithub size='24'></LuGithub>
+      </FooterItem>
+      <FooterItem href="https://linkedin.com/in/ptrandev">
+        <LuLinkedin size='24'></LuLinkedin>
+      </FooterItem>
+      <FooterItem href="https://instagram.com/ptrandev">
+        <LuInstagram size='24'></LuInstagram>
+      </FooterItem>
     </>
-  )
-}
+  );
+};
 
-export default FooterLinks
+export default FooterLinks;
