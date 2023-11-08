@@ -25,13 +25,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    `gatsby-plugin-page-transitions`,
-    {
-      resolve: `gatsby-plugin-page-transitions`,
-      options : {
-        transitionTime: 300
-      }
-    },
     `gatsby-plugin-react-helmet`
   ]
 }
