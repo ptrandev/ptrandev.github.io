@@ -75,7 +75,7 @@ export default function Home() {
         computer science honor society.
       </p>
       <p>
-        Outside of those things, I enjoy personal finance, fitness, cooking, and watches. I love staying curious!
+        Outside of those things, I enjoy personal finance, fitness, cooking, music, podcasts, and watches. I love staying curious!
       </p>
     </Layout>
   )
