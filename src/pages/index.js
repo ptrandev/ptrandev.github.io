@@ -64,7 +64,7 @@ export default function Home() {
         of videos and photos on-device. Check out my research involvement <Link to="/research">here</Link>.
       </p>
       <p>
-        Within the world of software engineering, I am most interest in crafting
+        Within the world of software engineering, I am most interested in crafting
         beautiful, functional web applications and developing robust, adaptable
         computer vision systems for robots. Check out my personal projects <Link to="/projects">here</Link>.
       </p>
