@@ -75,7 +75,7 @@ export default function Home() {
         computer science honor society.
       </p>
       <p>
-        If you're interested in learning more about my professional and academic experience, vie my resume <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/17iHpJ0vyYoUBL6EvWBSxSZhjrdKDjjmX/view?usp=sharing">here</a>.
+        If you're interested in learning more about my professional and academic experience, view my resume <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/17iHpJ0vyYoUBL6EvWBSxSZhjrdKDjjmX/view?usp=sharing">here</a>.
       </p>
       <p>
         Outside of those things, I enjoy personal finance, fitness, cooking, music, podcasts, and watches. I love staying curious!
