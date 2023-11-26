@@ -54,7 +54,7 @@ export default function Home() {
         <Avatar src="https://res.cloudinary.com/donutdeflector/image/upload/h_300,f_auto,q_auto:/v1664390255/ptran.dev/headshot.jpg"></Avatar>
         <p>
           I am a BA/MS student at Boston University studying computer science.
-          I'm currently working at <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as a full stack developer, where I develop tools that enable billions of dollars worth of real estate transactions.
+          I'm currently working at <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as Head of Product, where I develop tools that enable billions of dollars worth of real estate transactions.
         </p>
       </Introduction>
       <p>
