@@ -61,11 +61,15 @@ export default function Home() {
         I have a passion for conducting interdisciplinary research. I am currently
         working on a project with Professor Phillip Lobel and his marine biology
         lab at BU to develop an application that categorizes and analyzes millions
-        of videos and photos on-device. Check out my research involvement <Link to="/research">here</Link>.
+        of videos and photos on-device. I am interested in conducting Human-Computer
+        Interaction (HCI) research in the future. I like using a broad range of
+        skills to create tools, products, and systems that enable and empower
+        people to do what they love and care about.
+        Check out my research involvement <Link to="/research">here</Link>.
       </p>
       <p>
         Within the world of software engineering, I am most interested in crafting
-        beautiful, functional web applications and developing robust, adaptable
+        beautiful, functional web applications. I have also developed robust, adaptable
         computer vision systems for robots. Check out my personal projects <Link to="/projects">here</Link>.
       </p>
       <p>
