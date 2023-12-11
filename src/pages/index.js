@@ -74,7 +74,7 @@ export default function Home() {
       </p>
       <p>
         I am heavily involved in student organizations.
-        I am the Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/">BUILDS</a>, a student run hackerspace which also serves at BU's official Association for Computing Machinery (ACM) chapter.
+        I am the Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/">BUILDS</a>, a student run makerspace which also serves at BU's official Association for Computing Machinery (ACM) chapter.
         I have served as the Director of Marketing in <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a
         computer science honor society.
       </p>
