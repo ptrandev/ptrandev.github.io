@@ -53,19 +53,18 @@ export default function Home() {
       <Introduction>
         <Avatar src="https://res.cloudinary.com/donutdeflector/image/upload/h_400,f_auto,q_auto:/v1664390255/ptran.dev/headshot.jpg"></Avatar>
         <p>
-          I am a BA/MS student at Boston University studying computer science.
           I'm currently working at <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as Head of Product, where I develop tools that enable billions of dollars worth of real estate transactions.
         </p>
       </Introduction>
       <p>
-        I have a passion for conducting interdisciplinary research. I am currently
-        working on a project with Professor Phillip Lobel and his marine biology
+        I have a passion for conducting interdisciplinary research. I have
+        worked on a project with Professor Phillip Lobel and his marine biology
         lab at BU to develop an application that categorizes and analyzes millions
         of videos and photos on-device.
       </p>
       <p>
-        I am interested in conducting Human-Computer Interaction (HCI) research
-        in the future. I like using a broad range of skills to create tools,
+        I am interested in conducting Human-Computer Interaction (HCI) research.
+        I like using a broad range of skills to create tools,
         products, and systems that enable and empower people to do what they
         love and care about. Check out my research involvement <Link to="/research">here</Link>.
       </p>
@@ -75,9 +74,8 @@ export default function Home() {
         computer vision systems for robots. Check out my personal projects <Link to="/projects">here</Link>.
       </p>
       <p>
-        I am heavily involved in student organizations.
-        I am the Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/">BUILDS</a>, a student run makerspace which also serves at BU's official Association for Computing Machinery (ACM) chapter.
-        I have served as the Director of Marketing in <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a
+        I have served as the Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/">BUILDS</a>, a student run makerspace which also serves at BU's official Association for Computing Machinery (ACM) chapter.
+        I have also served as the Director of Marketing in <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a
         computer science honor society.
       </p>
       <p>
