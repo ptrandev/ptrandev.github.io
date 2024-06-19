@@ -53,7 +53,10 @@ export default function Home() {
       <Introduction>
         <Avatar src="https://res.cloudinary.com/donutdeflector/image/upload/h_400,f_auto,q_auto:/v1664390255/ptran.dev/headshot.jpg"></Avatar>
         <p>
-          I'm currently working at <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as Head of Product, where I develop tools that enable billions of dollars worth of real estate transactions.
+          I'm currently working for <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a>
+          as Head of Product, where I develop tools that enable billions of dollars worth of real estate transactions. 
+          I am also a PhD student advised by <a target="_blank" rel="noopener noreferrer" href="https://denisegeiskkovitch.com/">Professor Denise Geiskkovitch</a>
+          at McMaster University, where we study human-robot interaction.
         </p>
       </Introduction>
       <p>
