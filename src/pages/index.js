@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <Layout
       title="Home"
-      description="Phillip Tran: Head of Product at Atllas, Inc. // Graduate Student at Boston University"
+      description="Phillip Tran: Head of Product at Atllas, Inc. // PhD Student at McMaster University"
     >
       <Greeting>
         Hi, I'm Phillip.
@@ -55,13 +55,13 @@ export default function Home() {
         <p>
           I'm currently working for <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as
           Head of Product, where I develop tools that enable billions of dollars worth of real estate transactions. 
-          I am also a PhD student advised by <a target="_blank" rel="noopener noreferrer" href="https://denisegeiskkovitch.com/">Professor Denise Geiskkovitch</a> at
+          I am also a PhD student advised by <a target="_blank" rel="noopener noreferrer" href="https://denisegeiskkovitch.com/">Dr. Denise Geiskkovitch</a> at
           McMaster University, where we study human-robot interaction.
         </p>
       </Introduction>
       <p>
         I have a passion for conducting interdisciplinary research. I have
-        worked on a project with Professor Phillip Lobel and his marine biology
+        worked on a project with Dr. Phillip Lobel and his marine biology
         lab at BU to develop an application that categorizes and analyzes millions
         of videos and photos on-device.
       </p>
