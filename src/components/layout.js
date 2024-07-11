@@ -26,6 +26,28 @@ flex: 1;
 `
 
 export default function Layout( props ) {
+  // get current year in roman numerals
+  const year = new Date().getFullYear();
+
+  const romanize = (num) => {
+    if (isNaN(num))
+      return NaN;
+    var digits = String(+num).split(""),
+      key = ["", "C", "CC", "CCC", "CD", "D",
+        "DC", "DCC", "DCCC", "CM",
+        "", "X", "XX", "XXX", "XL", "L",
+        "LX", "LXX", "LXXX", "XC",
+        "", "I", "II", "III", "IV", "V",
+        "VI", "VII", "VIII", "IX"],
+      roman = "",
+      i = 3;
+    while (i--)
+      roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+    return Array(+digits.join("") + 1).join("M") + roman;
+  }
+
+  const romanYear = romanize(year);
+
   const data = useStaticQuery(
     graphql`
       query {
@@ -64,7 +86,7 @@ export default function Layout( props ) {
           { props.children }
         </Content>
         <Footer
-          CopyrightYear="MMXXIII"
+          CopyrightYear={romanYear}
         />
       </Container>
     </div>
