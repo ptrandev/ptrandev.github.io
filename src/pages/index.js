@@ -60,8 +60,11 @@ export default function Home() {
         </p>
       </Introduction>
       <p>
-          I am not actively looking for additional contract work opportunities. However, if you'd
-          like to discuss an opportunity with me, please feel free toe reach out to me via LinkedIn!
+          I own Phillip Tran Software Development Services, offering software
+          development solutions to businesses. While I'm not actively seeking
+          new contract opportunities, I'm open to discussing potential projects.
+          Please feel free to connect with me on LinkedIn if you'd like to
+          explore possibilities.
       </p>
       <p>
         I have a passion for conducting interdisciplinary research. I have
