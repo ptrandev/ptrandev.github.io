@@ -60,6 +60,10 @@ export default function Home() {
         </p>
       </Introduction>
       <p>
+          I am not actively looking for additional contract work opportunities. However, if you'd
+          like to discuss an opportunity with me, please feel free toe reach out to me via LinkedIn!
+      </p>
+      <p>
         I have a passion for conducting interdisciplinary research. I have
         worked on a project with Dr. Phillip Lobel and his marine biology
         lab at BU to develop an application that categorizes and analyzes millions
