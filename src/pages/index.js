@@ -61,10 +61,9 @@ export default function Home() {
       </Introduction>
       <p>
           I own Phillip Tran Software Development Services, offering software
-          development solutions to businesses. While I'm not actively seeking
-          new contract opportunities, I'm open to discussing potential projects.
-          Please feel free to connect with me on LinkedIn if you'd like to
-          explore possibilities.
+          development solutions to businesses. If you require my services,
+          I'm open to discussing potential projects. Please feel free to
+          connect with me on LinkedIn if you'd like to explore possibilities.
       </p>
       <p>
         I have a passion for conducting interdisciplinary research. I have
