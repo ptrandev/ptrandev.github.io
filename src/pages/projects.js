@@ -65,13 +65,14 @@ a:nth-child(2) {
 }
 `
 
+
 const CardTags = styled.div`
 display: flex;
 flex-wrap: wrap;
 margin-bottom: ${rhythm(0.25)};
 
 span {
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   border: 1px solid ${colors.black};
   margin-right: ${rhythm(0.25)};
@@ -112,9 +113,7 @@ export default function Projects({ data }) {
               <CardTitle>
                 {node.frontmatter.title}{" "}
               </CardTitle>
-              <CardSubtitle>
-                {node.frontmatter.meta.date}
-              </CardSubtitle>
+              <CardSubtitle>{node.frontmatter.meta.date}</CardSubtitle>
               <p css={css`
                 flex: 1;
                 margin: 0;
