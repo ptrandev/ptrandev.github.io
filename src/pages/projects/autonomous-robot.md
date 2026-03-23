@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  Autonomous Robot
-tags: ['python']
+tags: ['Python', 'Computer Vision', 'Robotics']
 featured: true
 meta:
   date: 2020 Q1
