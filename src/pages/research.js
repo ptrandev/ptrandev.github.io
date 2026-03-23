@@ -17,14 +17,6 @@ const ProjectsContainer = styled.div`
 const Project = styled.div`
   width: 100%;
   margin-bottom: ${rhythm(1)};
-
-  @media (min-width: 768px) {
-    width: calc(50% - ${rhythm(0.5)});
-
-    :nth-child(odd) {
-      margin-right: ${rhythm(1)};
-    }
-  }
 `;
 
 const CardButtons = styled.div`
@@ -65,13 +57,14 @@ const CardButtons = styled.div`
   }
 `;
 
+
 const CardTags = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: ${rhythm(0.25)};
 
   span {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
     border: 1px solid ${colors.black};
     margin-right: ${rhythm(0.25)};
@@ -91,13 +84,16 @@ export default function Research({ data }) {
       <p>
         The research projects that I have been involved in have been
         interdisciplinary in nature, spanning the fields of computer science,
-        biology, and government.
+        biology, and government. You can find my publications on{" "}
+        <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=NYJXdlUAAAAJ">
+          Google Scholar
+        </a>.
       </p>
       <ProjectsContainer>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Project key={node.id}>
             <Card
-              src={`https://res.cloudinary.com/donutdeflector/image/upload/h_480,f_auto,q_auto:/v1608690691/ptran.dev/research/${node.frontmatter.meta.hero}`}
+              src={`https://res.cloudinary.com/donutdeflector/image/upload/w_800,h_600,c_fill,f_auto,q_auto:/v1608690691/ptran.dev/research/${node.frontmatter.meta.hero}`}
               alt={`${node.frontmatter.title} hero`}
             >
               <CardTags>
@@ -117,6 +113,15 @@ export default function Research({ data }) {
               </p>
               <hr></hr>
               <CardButtons>
+                {node.frontmatter.meta.paper && (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={node.frontmatter.meta.paper}
+                  >
+                    View Paper
+                  </a>
+                )}
                 {node.frontmatter.meta.site && (
                   <a
                     target="_blank"
@@ -181,6 +186,7 @@ export const query = graphql`
             meta {
               date
               site
+              paper
               code
               video
               hero

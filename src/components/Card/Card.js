@@ -11,6 +11,12 @@ box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 background: #fff;
 transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
 
+${props => props.horizontal ? `
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+` : ``}
+
 :hover {
   box-shadow: ${props => props.hover ? `0 0.5rem 1rem rgba(0, 0, 0, 0.15)`: `0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)`};
 }
@@ -44,8 +50,28 @@ const CardSubtitle = styled.h5`
 margin-bottom: ${rhythm(0.5)};
 `
 
+const CardImgContainer = styled.div`
+flex-shrink: 0;
+overflow: hidden;
+max-height: 300px;
+
+${props => props.horizontal ? `
+  width: 280px;
+  max-height: none;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 220px;
+  }
+` : ``}
+`
+
 const CardImg = styled.img`
 margin: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
 `
 
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
@@ -59,9 +85,12 @@ const Card = (props) => {
     >
       <CardElement
         hover={props.hover}
+        horizontal={props.horizontal}
       >
         {props.src &&
+          <CardImgContainer horizontal={props.horizontal}>
             <CardImg src={props.src} alt={props.alt}></CardImg>
+          </CardImgContainer>
         }
         <CardBody>
           {props.children}
