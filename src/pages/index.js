@@ -53,29 +53,14 @@ export default function Home() {
       <Introduction>
         <Avatar src="https://res.cloudinary.com/donutdeflector/image/upload/h_400,f_auto,q_auto:/v1664390255/ptran.dev/headshot.jpg"></Avatar>
         <p>
-          I'm currently working for <a target="_blank" rel="noopener noreferrer" href="https://atllas.com/">Atllas, Inc.</a> as
-          Head of Product, where I develop tools that enable billions of dollars worth of real estate transactions. 
-          I am also a PhD student advised by <a target="_blank" rel="noopener noreferrer" href="https://denisegeiskkovitch.com/">Dr. Denise Geiskkovitch</a> at
-          McMaster University, where we study human-robot interaction.
+          I'm Head of Product at <a target="_blank" rel="noopener noreferrer" href="https://atllasx.com/">Atllas, Inc.</a>, where I build AI-powered inbound and outbound calling solutions.
+          I'm also a PhD student at McMaster University, studying human-robot interaction (HRI) under <a target="_blank" rel="noopener noreferrer" href="https://denisegeiskkovitch.com/">Dr. Denise Geiskkovitch</a> at the <a target="_blank" rel="noopener noreferrer" href="https://huron.cas.mcmaster.ca/">HuRoN Lab</a>.
         </p>
       </Introduction>
       <p>
-          I own Phillip Tran Software Development Services, offering software
-          development solutions to businesses. If you require my services,
-          I'm open to discussing potential projects. Please feel free to
-          connect with me on LinkedIn if you'd like to explore possibilities.
-      </p>
-      <p>
-        I have a passion for conducting interdisciplinary research. I have
-        worked on a project with Dr. Phillip Lobel and his marine biology
-        lab at BU to develop an application that categorizes and analyzes millions
-        of videos and photos on-device.
-      </p>
-      <p>
-        I am interested in conducting Human-Computer Interaction (HCI) research.
-        I like using a broad range of skills to create tools,
+        I am passionate about HRI research, using a broad range of skills to create tools,
         products, and systems that enable and empower people to do what they
-        love and care about. Check out my research involvement <Link to="/research">here</Link>.
+        love and care about. Check out my research involvement <Link to="/research">here</Link>, or view my publications on <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=NYJXdlUAAAAJ">Google Scholar</a>.
       </p>
       <p>
         Within the world of software engineering, I am most interested in crafting
@@ -83,9 +68,13 @@ export default function Home() {
         computer vision systems for robots. Check out my personal projects <Link to="/projects">here</Link>.
       </p>
       <p>
-        I have served as the Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/">BUILDS</a>, a student run makerspace which also serves at BU's official Association for Computing Machinery (ACM) chapter.
-        I have also served as the Director of Marketing in <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a
-        computer science honor society.
+        I also own Phillip Tran Software Development Services, offering software
+        development solutions to businesses. If you're interested in working together,
+        feel free to connect with me on <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ptrandev/">LinkedIn</a>.
+      </p>
+      <p>
+        Previously, I served as Vice President of <a target="_blank" rel="noopener noreferrer" href="https://builds.cc/">BUILDS</a>, BU's student-run makerspace and ACM chapter,
+        and as Director of Marketing for <a target="_blank" rel="noopener noreferrer" href="https://upe.bu.edu/">Upsilon Pi Epsilon</a>, a computer science honor society.
       </p>
       <p>
         If you're interested in learning more about my professional and academic experience, view my resume <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/17iHpJ0vyYoUBL6EvWBSxSZhjrdKDjjmX/view?usp=sharing">here</a>.
