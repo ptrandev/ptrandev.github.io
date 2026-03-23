@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 import { rhythm } from "../../utils/typography";
 
-import { LuGithub, LuLinkedin, LuInstagram, LuFileText } from "react-icons/lu";
+import { LuGithub, LuLinkedin, LuInstagram, LuFileText, LuGraduationCap } from "react-icons/lu";
 
 const FooterItem = styled.a`
   color: #f1f1f1;
@@ -27,6 +27,9 @@ const FooterLinks = () => {
     <>
       <FooterItem href="https://drive.google.com/file/d/17iHpJ0vyYoUBL6EvWBSxSZhjrdKDjjmX/view?usp=sharing">
         <LuFileText size='24'></LuFileText>
+      </FooterItem>
+      <FooterItem href="https://scholar.google.com/citations?user=NYJXdlUAAAAJ">
+        <LuGraduationCap size='24'></LuGraduationCap>
       </FooterItem>
       <FooterItem href="https://github.com/ptrandev">
         <LuGithub size='24'></LuGithub>
