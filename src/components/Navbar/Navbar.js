@@ -35,6 +35,16 @@ display: flex;
 align-items: center;
 margin-top: ${rhythm(0.25)};
 flex-wrap: wrap;
+
+/* Under 400px the links sit on their own row below the title, so spreading
+   them edge to edge spaces them evenly without hand-tuned margins. */
+width: 100%;
+justify-content: space-between;
+
+@media (min-width: 400px) {
+  width: auto;
+  justify-content: flex-start;
+}
 `
 
 const Navbar = props => {
