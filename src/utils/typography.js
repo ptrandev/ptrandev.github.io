@@ -1,28 +1,8 @@
-import Typography from "typography"
-import kirkhamTheme from "typography-theme-kirkham"
+/**
+ * The Kirkham theme set a 1.5rem baseline. Its generated CSS now lives in
+ * src/styles/typography.css, so this only has to reproduce the spacing helper
+ * that every styled component calls.
+ */
+const BASELINE_REM = 1.5
 
-import colors from "../styles/colors"
-
-kirkhamTheme.headerFontFamily = ["Inter", "Helvetica", "sans-serif"]
-kirkhamTheme.bodyFontFamily = ["Inter", "Helvetica", "sans-serif"]
-kirkhamTheme.googleFonts = [
-  {
-    name: "Inter",
-    styles: ["800", "800i", "400", "400i"]
-  }
-]
-kirkhamTheme.headerWeight = 800
-kirkhamTheme.blockMarginBottom = 1
-kirkhamTheme.baseLineHeight = 1.5
-kirkhamTheme.overrideThemeStyles = () => ({
-  a: {
-    color: `${colors.primary}`
-  }
-})
-kirkhamTheme.headerColor = `${colors.black}`
-kirkhamTheme.bodyColor = `${colors.black}`
-
-const typography = new Typography(kirkhamTheme)
-
-export default typography
-export const rhythm = typography.rhythm
+export const rhythm = value => `${value * BASELINE_REM}rem`

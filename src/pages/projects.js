@@ -1,8 +1,9 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/Seo"
 
 import { rhythm } from "../utils/typography"
 import colors from "../styles/colors"
@@ -85,12 +86,13 @@ span:last-child {
 }
 `
 
+export const Head = () => (
+  <Seo title="Projects" description="Personal portfolio of Phillip Tran" />
+)
+
 export default function Projects({ data }) {
   return (
-    <Layout
-      title="Projects"
-      description="Personal portfolio of Phillip Tran"
-    >
+    <Layout>
       <h1>
         Projects
       </h1>
@@ -152,7 +154,7 @@ export const query = graphql`
         fileAbsolutePath: {regex: "/projects/"},
         frontmatter: {featured: {eq: true}}
       },
-      sort: { fields: [frontmatter___meta___date], order: [DESC] }) {
+      sort: { frontmatter: { meta: { date: DESC } } }) {
       totalCount
       edges {
         node {
@@ -168,9 +170,6 @@ export const query = graphql`
               hero
               figma
             }
-          }
-          fields {
-            slug
           }
           rawMarkdownBody
         }

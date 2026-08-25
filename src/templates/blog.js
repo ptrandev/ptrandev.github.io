@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
+import Seo from "../components/Seo"
 
 import { rhythm } from "../utils/typography"
 import colors from "../styles/colors"
@@ -49,13 +50,17 @@ text-decoration: none;
 }
 `
 
+export const Head = ({ data }) => (
+  <Seo
+    title={data.markdownRemark.frontmatter.title}
+    description={data.markdownRemark.frontmatter.description || data.markdownRemark.excerpt}
+  />
+)
+
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
   return (
-    <Layout
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
-    >
+    <Layout>
       <article>
         <PostHeader>
           <h1>{post.frontmatter.title}</h1>

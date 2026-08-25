@@ -1,8 +1,9 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/Seo"
 
 import { rhythm } from "../utils/typography"
 import colors from "../styles/colors"
@@ -85,12 +86,13 @@ span:last-child {
 }
 `
 
+export const Head = () => (
+  <Seo title="Media" description="Personal portfolio of Phillip Tran" />
+)
+
 export default function Projects({ data }) {
   return (
-    <Layout
-      title="Media"
-      description="Personal portfolio of Phillip Tran"
-    >
+    <Layout>
       <h1>
         Media
       </h1>
@@ -146,7 +148,7 @@ export const query = graphql`
         fileAbsolutePath: {regex: "/media/"},
         frontmatter: {featured: {eq: true}}
       },
-      sort: { fields: [frontmatter___meta___date], order: [DESC] }) {
+      sort: { frontmatter: { meta: { date: DESC } } }) {
       totalCount
       edges {
         node {
@@ -165,9 +167,6 @@ export const query = graphql`
             }
           }
           rawMarkdownBody
-          fields {
-            slug
-          }
         }
       }
     }

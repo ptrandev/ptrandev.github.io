@@ -1,8 +1,9 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/Seo"
 
 import { rhythm } from "../utils/typography"
 import colors from "../styles/colors"
@@ -101,12 +102,16 @@ p {
 }
 `
 
+export const Head = () => (
+  <Seo
+    title="Blog"
+    description="Writing on human-robot interaction, product engineering, and craft by Phillip Tran"
+  />
+)
+
 export default function Blog({ data }) {
   return (
-    <Layout
-      title="Blog"
-      description="Writing on human-robot interaction, product engineering, and craft by Phillip Tran"
-    >
+    <Layout>
       <h1>
         Blog
       </h1>
@@ -165,7 +170,7 @@ export const query = graphql`
       filter: {
         fileAbsolutePath: {regex: "/src/pages/blog/"}
       },
-      sort: { fields: [frontmatter___date], order: [DESC] }) {
+      sort: { frontmatter: { date: DESC } }) {
       totalCount
       edges {
         node {

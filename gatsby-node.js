@@ -10,6 +10,14 @@ exports.createSchemaCustomization = ({ actions }) => {
   // them so the blog queries still compile when no post is present. Everything
   // else on frontmatter stays inferred.
   createTypes(`
+    type MarkdownRemark implements Node {
+      fields: MarkdownRemarkFields
+    }
+
+    type MarkdownRemarkFields {
+      slug: String
+    }
+
     type MarkdownRemarkFrontmatter {
       title: String
       tags: [String]
@@ -22,14 +30,13 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
-    let slug = createFilePath({ node, getNode, basePath: `pages` })
-
+  if (node.internal.type === `MarkdownRemark` && isBlogPost(node)) {
     // Blog post files are named YYYY-MM-DD-title.md so they sort by date on
     // disk. The date belongs in the frontmatter, not the URL, so strip it.
-    if (isBlogPost(node)) {
-      slug = slug.replace(/\/\d{4}-\d{2}-\d{2}-/, `/`)
-    }
+    const slug = createFilePath({ node, getNode, basePath: `pages` }).replace(
+      /\/\d{4}-\d{2}-\d{2}-/,
+      `/`
+    )
 
     createNodeField({
       node,
@@ -41,12 +48,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+
+  // Only blog posts get their own page. Project, research, and media markdown
+  // is a one-paragraph blurb that the index card already shows in full, so a
+  // detail page for it would duplicate the card and nothing links to it.
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { fields: { slug: { ne: null } } }) {
         edges {
           node {
-            fileAbsolutePath
             fields {
               slug
             }
@@ -57,13 +67,9 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    // Blog posts get their own template. Everything else (projects, media,
-    // research) keeps rendering through blog-post.js.
     createPage({
       path: node.fields.slug,
-      component: path.resolve(
-        isBlogPost(node) ? `./src/templates/blog.js` : `./src/templates/blog-post.js`
-      ),
+      component: path.resolve(`./src/templates/blog.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.

@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
+import Seo from "../components/Seo"
 import styled from "@emotion/styled"
 
 
@@ -40,12 +41,16 @@ text-align: center;
 }
 `
 
+export const Head = () => (
+  <Seo
+    title="Home"
+    description="Phillip Tran: Head of Product at Atllas, Inc. // PhD Student at McMaster University"
+  />
+)
+
 export default function Home() {
   return (
-    <Layout
-      title="Home"
-      description="Phillip Tran: Head of Product at Atllas, Inc. // PhD Student at McMaster University"
-    >
+    <Layout>
       <Greeting>
         Hi, I'm Phillip.
       </Greeting>

@@ -1,8 +1,9 @@
 import React from "react";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import Seo from "../components/Seo";
 
 import { rhythm } from "../utils/typography";
 import colors from "../styles/colors";
@@ -77,9 +78,13 @@ const CardTags = styled.div`
   }
 `;
 
+export const Head = () => (
+  <Seo title="Research" description="Personal portfolio of Phillip Tran" />
+);
+
 export default function Research({ data }) {
   return (
-    <Layout title="Research" description="Personal portfolio of Phillip Tran">
+    <Layout>
       <h1>Research</h1>
       <p>
         The research projects that I have been involved in have been
@@ -174,7 +179,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/research/" }
         frontmatter: { featured: { eq: true } }
       }
-      sort: { fields: [frontmatter___meta___date], order: [DESC] }
+      sort: { frontmatter: { meta: { date: DESC } } }
     ) {
       totalCount
       edges {
@@ -192,9 +197,6 @@ export const query = graphql`
               hero
               figma
             }
-          }
-          fields {
-            slug
           }
           rawMarkdownBody
         }

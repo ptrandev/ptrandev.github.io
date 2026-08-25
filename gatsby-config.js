@@ -18,13 +18,5 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`
   ]
 }

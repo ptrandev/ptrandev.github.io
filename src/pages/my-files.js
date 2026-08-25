@@ -1,13 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/Seo"
+
+export const Head = () => (
+  <Seo title="My Site's Files" description="Personal portfolio of Phillip Tran" />
+)
 
 export default function MyFiles({ data }) {
   return (
-    <Layout
-      title="My Site's Files"
-      description="Personal portfolio of Phillip Tran"
-    >
+    <Layout>
       <div>
         <h1>My Site's Files</h1>
         <table>
