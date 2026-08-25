@@ -3,9 +3,11 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default function MyFiles({ data }) {
-  console.log(data)
   return (
-    <Layout>
+    <Layout
+      title="My Site's Files"
+      description="Personal portfolio of Phillip Tran"
+    >
       <div>
         <h1>My Site's Files</h1>
         <table>

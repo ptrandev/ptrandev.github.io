@@ -105,7 +105,7 @@ export default function Projects({ data }) {
             >
               <CardTags>
                 {node.frontmatter.tags.map(tag => (
-                  <span>{tag}</span>
+                  <span key={tag}>{tag}</span>
                 ))}
               </CardTags>
               <CardTitle>
