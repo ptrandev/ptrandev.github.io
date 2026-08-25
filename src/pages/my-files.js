@@ -1,5 +1,4 @@
 import React from "react"
-import { jsx, css } from "@emotion/core"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
