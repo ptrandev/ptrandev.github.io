@@ -1,99 +1,154 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+# ptran.dev
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Personal site of Phillip Tran. It holds my research, software projects, music
+and media, and a blog.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Live at [ptran.dev](https://ptran.dev).
 
-## 🚀 Quick start
+Built with Gatsby 2, React 16, Emotion, and markdown content. Pages are static
+and content lives in this repo as markdown files.
 
-1.  **Create a Gatsby site.**
+## Quick start
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+```shell
+npm install
+npm run develop
+```
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+The site runs at `http://localhost:8000`. The GraphQL explorer runs at
+`http://localhost:8000/___graphql`.
 
-1.  **Start developing.**
+Gatsby 2 uses webpack 4, which needs the legacy OpenSSL provider on Node 17 and
+later. The `develop` and `build` scripts already set
+`NODE_OPTIONS=--openssl-legacy-provider`. Developed on Node 20.
 
-    Navigate into your new site’s directory and start it up.
+## Scripts
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+| Script | What it does |
+| --- | --- |
+| `npm run develop` | Start the dev server with hot reload |
+| `npm run build` | Build the production site into `public/` |
+| `npm run serve` | Serve the last production build |
+| `npm run clean` | Delete `.cache/` and `public/` |
+| `npm run format` | Run Prettier over js, jsx, json, and md files |
 
-1.  **Open the source code and start editing!**
+## Structure
 
-    Your site is now running at `http://localhost:8000`!
+```
+src/
+  components/     Navbar, Footer, Card, Helmet, layout
+  pages/          One .js file per index page, one folder per content type
+    projects/     Project markdown
+    research/     Research markdown
+    media/        Music and media markdown
+    blog/         Blog post markdown
+  templates/      blog.js renders blog posts, blog-post.js renders the rest
+  styles/         colors.js design tokens, global.js
+  utils/          typography.js (Typography.js + Kirkham theme, Inter)
+static/           Files copied to the site root
+gatsby-node.js    Builds a slug for each markdown file, then a page for it
+gatsby-config.js  Site metadata and plugins
+```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+The navbar links Home, Research, Projects, and Blog. The Media page is built at
+`/media` but is not in the navbar.
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## Adding content
 
-## 🧐 What's inside?
+Add a markdown file to the folder for its type. `gatsby-node.js` turns the file
+path into the page slug, so `src/pages/projects/trshy.md` becomes
+`/projects/trshy/`.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Projects, research, and media only appear on their index page when
+`featured: true`. Blog posts always appear.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+### Projects and research
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+```markdown
+---
+layout: project
+title: TRSHY
+tags: ['html/css', 'django', 'postgres']
+featured: true
+meta:
+  date: 2018 Q4
+  hero: trshy-hero.jpg
+  site: https://trshy.herokuapp.com/
+  code: https://github.com/trshy/trshy
+---
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+One or two sentences. The card shows the raw markdown body as its summary, so
+keep it to plain text.
+```
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+Each `meta` link renders one button on the card:
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+| Field | Button | Pages |
+| --- | --- | --- |
+| `site` | View Site | Projects, Research |
+| `code` | View Code | Projects, Research |
+| `video` | View Video | Projects, Research, Media |
+| `figma` | View Figma | Projects, Research |
+| `paper` | View Paper | Research |
+| `listen` | Listen | Media |
+| `socials` | Socials | Media |
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+Cards sort by `meta.date` in descending order. The date is a free text string,
+such as `2026 Q1`.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+### Blog posts
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+```markdown
+---
+layout: blog
+title: "Why I'm Starting a Blog"
+date: 2026-08-25
+tags: ['Writing', 'Research', 'Product']
+description: A first post on why I am writing in public.
+---
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+Body in markdown.
+```
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+Blog posts sort by `date` in descending order. The card shows `description`, or
+the first 280 characters of the post when `description` is absent. Read time
+comes from `timeToRead`.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+## Images
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+Hero images are hosted on Cloudinary, not in this repo. Set `meta.hero` to the
+file name only. Each index page builds the full URL:
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+| Content type | Cloudinary folder |
+| --- | --- |
+| Projects | `ptran.dev/projects/` |
+| Research | `ptran.dev/research/` |
+| Media | `ptran.dev/media/` |
 
-## 🎓 Learning Gatsby
+The URLs request `f_auto,q_auto` so Cloudinary picks the format and quality.
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+## Styling
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+Colors live in [src/styles/colors.js](src/styles/colors.js):
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+| Token | Value |
+| --- | --- |
+| `black` | `#191919` |
+| `white` | `#f1f1f1` |
+| `primary` | `#3a4de8` |
+| `secondary` | `#E32665` |
 
-## 💫 Deploy
+Type is Typography.js with the Kirkham theme, overridden to Inter at weights 400
+and 800. See [src/utils/typography.js](src/utils/typography.js). Use `rhythm()`
+for spacing so vertical rhythm stays consistent.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+Component styles use Emotion, either `styled` or the `css` prop.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+## Deploying
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+Netlify builds and serves ptran.dev, with Cloudflare in front of it.
+
+GitHub Pages also serves this repo at
+[ptrandev.github.io](https://ptrandev.github.io). That build is the legacy
+Jekyll one reading the repo root, so it renders this README, not the Gatsby
+site.

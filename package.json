@@ -1,17 +1,31 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "ptran-dev",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Personal site of Phillip Tran: research, projects, media, and blog.",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "Phillip Tran <donutdeflector@tuta.io>",
+  "homepage": "https://ptran.dev",
+  "keywords": [
+    "portfolio",
+    "personal-site",
+    "gatsby",
+    "blog"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ptrandev/ptrandev.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/ptrandev/ptrandev.github.io/issues"
+  },
   "scripts": {
     "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
     "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -34,12 +48,5 @@
   },
   "devDependencies": {
     "prettier": "2.0.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
