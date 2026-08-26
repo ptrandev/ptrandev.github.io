@@ -32,7 +32,7 @@ a {
   margin-bottom: ${rhythm(0.25)};
 }
 
-a:first-child {
+a:first-of-type {
   background-color: ${colors.primary};
   color: ${colors.white};
   padding: ${rhythm(0.25)} ${rhythm(0.5)};

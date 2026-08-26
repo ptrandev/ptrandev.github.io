@@ -22,7 +22,7 @@ margin-bottom: ${rhythm(1)};
 @media (min-width: 768px) {
   width: calc(50% - ${rhythm(0.5)});
 
-  :nth-child(odd) {
+  :nth-of-type(odd) {
     margin-right: ${rhythm(1)};
   }
 }
@@ -38,7 +38,7 @@ a {
   margin-bottom: ${rhythm(0.25)};
 }
 
-a:first-child {
+a:first-of-type {
   background-color: ${colors.primary};
   color: ${colors.white};
   padding: ${rhythm(0.25)} ${rhythm(0.5)};
@@ -52,7 +52,7 @@ a:first-child {
   }
 }
 
-a:nth-child(2) {
+a:nth-of-type(2) {
   border: 1px solid ${colors.primary};
   padding: calc(${rhythm(0.25)} - 1px) calc(${rhythm(0.5)} - 1px);
   transition: all 0.15s ease-out;

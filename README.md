@@ -5,7 +5,7 @@ and media, and a blog.
 
 Live at [ptran.dev](https://ptran.dev).
 
-Built with Gatsby 2, React 16, Emotion, and markdown content. Pages are static
+Built with Gatsby 5, React 18, Emotion, and markdown content. Pages are static
 and content lives in this repo as markdown files.
 
 ## Quick start
@@ -18,9 +18,7 @@ npm run develop
 The site runs at `http://localhost:8000`. The GraphQL explorer runs at
 `http://localhost:8000/___graphql`.
 
-Gatsby 2 uses webpack 4, which needs the legacy OpenSSL provider on Node 17 and
-later. The `develop` and `build` scripts already set
-`NODE_OPTIONS=--openssl-legacy-provider`. Developed on Node 20.
+Developed on Node 20. `package.json` requires Node 18 or later.
 
 ## Scripts
 
@@ -36,37 +34,44 @@ later. The `develop` and `build` scripts already set
 
 ```
 src/
-  components/     Navbar, Footer, Card, Helmet, layout
+  components/     Navbar, Footer, Card, Seo, layout
   pages/          One .js file per index page, one folder per content type
+    404.js        Not-found page
     projects/     Project markdown
     research/     Research markdown
     media/        Music and media markdown
     blog/         Blog post markdown
-  templates/      blog.js renders blog posts, blog-post.js renders the rest
-  styles/         colors.js design tokens, global.js
+  templates/      blog.js renders one blog post
+  styles/         colors.js design tokens, typography.css
   utils/          typography.js (Typography.js + Kirkham theme, Inter)
 static/           Files copied to the site root
-gatsby-node.js    Builds a slug for each markdown file, then a page for it
+gatsby-node.js    Builds a slug and a page for each blog post
 gatsby-config.js  Site metadata and plugins
 ```
 
 The navbar links Home, Research, Projects, and Blog. The Media page is built at
-`/media` but is not in the navbar.
+`/media` and is kept out of the navbar on purpose.
 
 ## Adding content
 
-Add a markdown file to the folder for its type. `gatsby-node.js` turns the file
-path into the page slug, so `src/pages/projects/trshy.md` becomes
-`/projects/trshy/`.
+Add a markdown file to the folder for its type.
 
-Projects, research, and media only appear on their index page when
-`featured: true`. Blog posts always appear.
+Blog posts are the only content with a page of their own. Name the file
+`YYYY-MM-DD-title.md` so posts sort by date on disk. `gatsby-node.js` strips the
+date prefix to build the slug, so `src/pages/blog/2026-08-26-model-selection.md`
+becomes `/blog/model-selection/`. Put the date in the frontmatter, not the URL.
+
+Projects, research, and media have no detail page. The index card shows the
+whole markdown body, so a detail page would only repeat it. They appear on their
+index page only when `featured: true`. Blog posts always appear.
+
+Older files carry a `layout:` key left over from the Jekyll site. No code reads
+it. New files do not need it.
 
 ### Projects and research
 
 ```markdown
 ---
-layout: project
 title: TRSHY
 tags: ['html/css', 'django', 'postgres']
 featured: true
@@ -100,7 +105,6 @@ such as `2026 Q1`.
 
 ```markdown
 ---
-layout: blog
 title: "Why I'm Starting a Blog"
 date: 2026-08-25
 tags: ['Writing', 'Research', 'Product']

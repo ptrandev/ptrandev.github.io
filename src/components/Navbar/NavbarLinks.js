@@ -8,7 +8,7 @@ const NavItem = styled(Link)`
   font-weight: 800;
   text-decoration: none;
 
-  /* Five links at full size need 414px, but a 320px screen leaves 266px inside
+  /* Four links at full size need 330px, but a 320px screen leaves 266px inside
      the container padding. Step the type and the gaps down so the row still
      fits. Below 400px the container distributes the gaps instead of margins. */
   font-size: 0.75rem;
@@ -40,7 +40,6 @@ const NavbarLinks = () => {
       <NavItem to="/research">Research</NavItem>
       <NavItem to="/projects">Projects</NavItem>
       <NavItem to="/blog">Blog</NavItem>
-      <NavItem to="/media">Media</NavItem>
     </>
   );
 };

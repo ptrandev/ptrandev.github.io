@@ -30,7 +30,7 @@ const CardButtons = styled.div`
     margin-bottom: ${rhythm(0.25)};
   }
 
-  a:first-child {
+  a:first-of-type {
     background-color: ${colors.primary};
     color: ${colors.white};
     padding: ${rhythm(0.25)} ${rhythm(0.5)};
@@ -44,7 +44,7 @@ const CardButtons = styled.div`
     }
   }
 
-  a:nth-child(2) {
+  a:nth-of-type(2) {
     border: 1px solid ${colors.primary};
     padding: calc(${rhythm(0.25)} - 1px) calc(${rhythm(0.5)} - 1px);
     transition: all 0.15s ease-out;
