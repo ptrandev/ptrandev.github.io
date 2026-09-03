@@ -1,160 +1,192 @@
-import React from "react"
-import { css } from "@emotion/react"
-import styled from "@emotion/styled"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Seo from "../components/Seo"
+import React from "react";
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import Seo from "../components/Seo";
 
-import { rhythm } from "../utils/typography"
-import colors from "../styles/colors"
+import { rhythm } from "../utils/typography";
+import colors from "../styles/colors";
 
-import { Card, CardTitle, CardSubtitle } from "../components/Card/Card"
+import { Card, CardTitle, CardSubtitle } from "../components/Card/Card";
 
 const ProjectsContainer = styled.div`
-display: flex;
-flex-wrap: wrap;
-`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 const Project = styled.div`
-width: 100%;
-margin-bottom: ${rhythm(1)};
+  width: 100%;
+  margin-bottom: ${rhythm(1)};
 
-@media (min-width: 768px) {
-  width: calc(50% - ${rhythm(0.5)});
+  @media (min-width: 768px) {
+    width: calc(50% - ${rhythm(0.5)});
 
-  :nth-of-type(odd) {
-    margin-right: ${rhythm(1)};
+    :nth-of-type(odd) {
+      margin-right: ${rhythm(1)};
+    }
   }
-}
-`
+`;
 
 const CardButtons = styled.div`
-display: flex;
-flex-wrap: wrap;
-margin-bottom: ${rhythm(-0.25)} !important;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: ${rhythm(-0.25)} !important;
 
-a {
-  text-decoration: none;
-  margin-bottom: ${rhythm(0.25)};
-}
-
-a:first-of-type {
-  background-color: ${colors.primary};
-  color: ${colors.white};
-  padding: ${rhythm(0.25)} ${rhythm(0.5)};
-  margin-right: ${rhythm(0.5)};
-  transition: all 0.15s ease-out;
-
-  :hover,
-  :focus,
-  :active {
-    background-color: ${colors.secondary};
+  a {
+    text-decoration: none;
+    margin-bottom: ${rhythm(0.25)};
   }
-}
 
-a:nth-of-type(2) {
-  border: 1px solid ${colors.primary};
-  padding: calc(${rhythm(0.25)} - 1px) calc(${rhythm(0.5)} - 1px);
-  transition: all 0.15s ease-out;
+  a:first-of-type {
+    background-color: ${colors.primary};
+    color: ${colors.white};
+    padding: ${rhythm(0.25)} ${rhythm(0.5)};
+    margin-right: ${rhythm(0.5)};
+    transition: all 0.15s ease-out;
 
-  :hover,
-  :focus,
-  :active {
-    border-color: ${colors.secondary};
-    color: ${colors.secondary};
+    :hover,
+    :focus,
+    :active {
+      background-color: ${colors.secondary};
+    }
   }
-}
-`
 
+  a:nth-of-type(2) {
+    border: 1px solid ${colors.primary};
+    padding: calc(${rhythm(0.25)} - 1px) calc(${rhythm(0.5)} - 1px);
+    transition: all 0.15s ease-out;
+
+    :hover,
+    :focus,
+    :active {
+      border-color: ${colors.secondary};
+      color: ${colors.secondary};
+    }
+  }
+`;
 
 const CardTags = styled.div`
-display: flex;
-flex-wrap: wrap;
-margin-bottom: ${rhythm(0.25)};
-
-span {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  border: 1px solid ${colors.black};
-  margin-right: ${rhythm(0.25)};
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: ${rhythm(0.25)};
-  padding: ${rhythm(0.125)} ${rhythm(0.25)};
-}
 
-span:last-child {
-  margin-right: 0;
-}
-`
+  span {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    border: 1px solid ${colors.black};
+    margin-right: ${rhythm(0.25)};
+    margin-bottom: ${rhythm(0.25)};
+    padding: ${rhythm(0.125)} ${rhythm(0.25)};
+  }
+
+  span:last-child {
+    margin-right: 0;
+  }
+`;
 
 export const Head = () => (
   <Seo title="Projects" description="Personal portfolio of Phillip Tran" />
-)
+);
 
 export default function Projects({ data }) {
   return (
     <Layout>
-      <h1>
-        Projects
-      </h1>
+      <h1>Projects</h1>
       <p>
-        Here are a few highlights of things I've built (with code) over the years.
-        Feel free to view more of my projects on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ptrandev">Github</a>.
+        Here are a few highlights of things I've built (with code) over the
+        years. Feel free to view more of my projects on{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/ptrandev"
+        >
+          Github
+        </a>
+        .
       </p>
       <ProjectsContainer>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Project key={node.id}>
             <Card
-              src={`https://res.cloudinary.com/donutdeflector/image/upload/h_480,f_auto,q_auto:/v1608690691/ptran.dev/projects/${node.frontmatter.meta.hero}`}
+              src={
+                node.frontmatter.meta.hero
+                  ? `https://res.cloudinary.com/donutdeflector/image/upload/h_480,f_auto,q_auto:/v1608690691/ptran.dev/projects/${node.frontmatter.meta.hero}`
+                  : undefined
+              }
               alt={`${node.frontmatter.title} hero`}
             >
               <CardTags>
-                {node.frontmatter.tags.map(tag => (
+                {node.frontmatter.tags.map((tag) => (
                   <span key={tag}>{tag}</span>
                 ))}
               </CardTags>
-              <CardTitle>
-                {node.frontmatter.title}{" "}
-              </CardTitle>
+              <CardTitle>{node.frontmatter.title} </CardTitle>
               <CardSubtitle>{node.frontmatter.meta.date}</CardSubtitle>
-              <p css={css`
-                flex: 1;
-                margin: 0;
-              `}
+              <p
+                css={css`
+                  flex: 1;
+                  margin: 0;
+                `}
               >
                 {node.rawMarkdownBody}
               </p>
               <hr></hr>
               <CardButtons>
-                {node.frontmatter.meta.site &&
-                  <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.site}>View Site</a>
-                }
-                {node.frontmatter.meta.video &&
-                  <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.video}>View Video</a>
-                }
-                {
-                  node.frontmatter.meta.figma &&
-                  <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.figma}>View Figma</a>
-                }
-                {node.frontmatter.meta.code &&
-                  <a target="_blank" rel="noopener noreferrer" href={node.frontmatter.meta.code}>View Code</a>
-                }
+                {node.frontmatter.meta.site && (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={node.frontmatter.meta.site}
+                  >
+                    View Site
+                  </a>
+                )}
+                {node.frontmatter.meta.video && (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={node.frontmatter.meta.video}
+                  >
+                    View Video
+                  </a>
+                )}
+                {node.frontmatter.meta.figma && (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={node.frontmatter.meta.figma}
+                  >
+                    View Figma
+                  </a>
+                )}
+                {node.frontmatter.meta.code && (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={node.frontmatter.meta.code}
+                  >
+                    View Code
+                  </a>
+                )}
               </CardButtons>
             </Card>
           </Project>
         ))}
       </ProjectsContainer>
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
   query {
     allMarkdownRemark(
       filter: {
-        fileAbsolutePath: {regex: "/projects/"},
-        frontmatter: {featured: {eq: true}}
-      },
-      sort: { frontmatter: { meta: { date: DESC } } }) {
+        fileAbsolutePath: { regex: "/projects/" }
+        frontmatter: { featured: { eq: true } }
+      }
+      sort: { frontmatter: { meta: { date: DESC } } }
+    ) {
       totalCount
       edges {
         node {
@@ -176,4 +208,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
