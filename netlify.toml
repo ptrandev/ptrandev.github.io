@@ -1,0 +1,6 @@
+# Netlify pins a site to the Node.js version of its original build image.
+# This project was pinned to Node 10, which cannot install gatsby 5 (requires
+# Node >= 18). Both .nvmrc and the variable below select Node 20, so the build
+# uses Node 20 whichever source Netlify reads first.
+[build.environment]
+  NODE_VERSION = "20"
