@@ -13,10 +13,23 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src`
+        path: `${__dirname}/src`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              target: `_blank`,
+              rel: `noopener noreferrer`,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-emotion`,
-  ]
-}
+  ],
+};
