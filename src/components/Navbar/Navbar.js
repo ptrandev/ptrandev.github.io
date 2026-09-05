@@ -35,16 +35,12 @@ display: flex;
 align-items: center;
 margin-top: ${rhythm(0.25)};
 flex-wrap: wrap;
+justify-content: flex-start;
 
-/* Under 400px the links sit on their own row below the title, so spreading
-   them edge to edge spaces them evenly without hand-tuned margins. */
-width: 100%;
-justify-content: space-between;
-
-@media (min-width: 400px) {
-  width: auto;
-  justify-content: flex-start;
-}
+/* The links stay left justified at every width. The gap scales with the
+   viewport on the same 320px to 480px ramp as the link type, so the row keeps
+   its proportions as it shrinks. */
+gap: clamp(0.5rem, ${rhythm(-1)} + 11.25vw, ${rhythm(1)});
 `
 
 const Navbar = props => {
