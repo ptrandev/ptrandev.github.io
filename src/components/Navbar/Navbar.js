@@ -39,8 +39,9 @@ justify-content: flex-start;
 
 /* The links stay left justified at every width. The gap scales with the
    viewport on the same 320px to 480px ramp as the link type, so the row keeps
-   its proportions as it shrinks. */
-gap: clamp(0.5rem, ${rhythm(-1)} + 11.25vw, ${rhythm(1)});
+   its proportions as it shrinks. At 320px the gap holds at 0.75rem, which
+   leaves 13px of the row unused. */
+gap: clamp(${rhythm(0.5)}, ${rhythm(-0.5)} + 8.4375vw, ${rhythm(1)});
 `
 
 const Navbar = props => {
