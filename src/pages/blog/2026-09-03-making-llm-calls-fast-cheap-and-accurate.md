@@ -6,7 +6,7 @@ tags: ['LLMs', 'Model Selection', 'Evaluation', 'Prompt Caching', 'Product Engin
 featured: true
 ---
 
-At [Atllas](https://atllas.com), we're building [hyzl](https://hyzl.ai), an AI voice agent platform that runs phone and text conversations for businesses. We handle everything from inbound receptionists to outbound calling campaigns.
+At [Atllas](https://atllas.com), we're building [hyzl](https://hyzl.app/), an AI voice agent platform that runs phone and text conversations for businesses. We handle everything from inbound receptionists to outbound calling campaigns.
 
 A lot of it is powered by large language models, so I've spent a good deal of time picking and tuning models to be fast, cheap, and accurate enough for production. While some of these findings are specific to [OpenAI models](https://developers.openai.com/api/docs/models), you can generalize this advice to other models as well.
 
